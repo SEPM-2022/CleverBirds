@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'head.html' %}
+    <title>Sign Up</title>
+
+    <style>
+        .balao {
+            background: white;
+            padding: 15px;
+            position: relative;
+            top: 20px;
+            left: 120px;
+            width: 50%;
+            border-radius: 15px;
+            float: left;
+            margin-left: -100px;
+            color: #3f1075d8 !important;
+        }
+
+        .fonte-jogo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+        }
+
+        .btn-signin {
+            color: #2a3463da;
+        }
+
+        .balao:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            top: 25px;
+            background: white;
+            -webkit-transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container rounded mt-5 mb-5">
+        <div class="d-flex flex-column align-items-center text-center p-3">
+            <div class="d-flex align-items-center text-center">
+                <img class="square" width="220px" src="../static/img/tweety-wait.gif">
+                <div class="balao fonte-jogo">Congrats! Your acount has been successfully created! Please <a
+                        class="btn-signin" href="../templates/index.html">sign in!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

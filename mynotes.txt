@@ -1,0 +1,57 @@
+
+
+
+
+============> SQL Starting with sqlalchemy
+
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application
+
+============> SQL  How to connect with SQLServer
+
+https://stackoverflow.com/questions/46739295/connect-to-mssql-database-using-flask-sqlalchemy
+
+SQLserver: 
+
+- database = 'CleverBirds_MYDB'
+- username = 'sa'
+- password = '#SenhadoSA123'
+
+============> SQL  JINJA {%include 'document.html'%}
+
+============> SQL game
+
+https://github.com/aaarafat/JS-Flappy-Bird
+
+============> SQL GITHUB project guidelines
+
+https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212
+
+
+
+============> SQL - Query
+CREATE DATABASE CleverBirds_MYDB;
+USE CleverBirds_MYDB;
+
+
+SELECT * FROM CleverBirds_MYDB.INFORMATION_SCHEMA.TABLES
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+SELECT * from clever_users;
+
+
+Flask-Test:
+https://pythonhosted.org/Flask-Testing/
+============> Testing 
+http://pythonclub.com.br/tdd-com-python-e-flask.html
+http://turing.com.br/material/flask/testing.html
+https://flask.palletsprojects.com/en/2.0.x/testing/
+
+
+''' 
+Creating virtual env: 
+1 - baixou a a bibl 
+2 virtualenv env
+ env\scripts\activate
+3 - Set-ExecutionPolicy Unrestricted -Scope Process (dar permissao para o windows)
+4 - env\scripts\activate (ativa o ambiente)
+ '''
