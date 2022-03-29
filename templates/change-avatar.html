@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'head.html' %}
+    <link href="static/signin.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .breadcrumb-ativo {
+            background: #3f1075d8 !important;
+            color: white;
+        }
+
+        .btn-avatar:hover {
+            background: #3f1075d8 !important;
+            color: white;
+        }
+
+        .btn-avatar {
+            background: #AA33FF !important;
+            color: black;
+        }
+
+        .first-bread {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .btn-next:hover {
+            background: #3f1075d8 !important;
+            color: white;
+        }
+
+        .btn-next {
+            background: #AA33FF !important;
+            color: black;
+        }
+
+        .last-bread {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .breadcrumb-objeto {
+            padding: 10px 30px;
+            background: #AA33FF;
+        }
+
+        .seta {
+            font-size: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .fonte-jogo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 28px;
+        }
+
+        .card-avatar {
+            background: white;
+            border: 1px solid gray;
+            border-radius: 10px;
+            max-width: 200px;
+            padding: 20px 10px;
+        }
+
+        .avatar-titulo {
+            background: white;
+            margin: 20px 0;
+        }
+
+        .avatar-rodape button {
+            border-color: #a6e1ff;
+            background: #a6e1ff;
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+
+        body {
+            background-image: url("static/img/fundo.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <h3 class="text-center mt-5 mb-3">Change Your Avatar &#128526</h4>
+    <form id="carrossel" method="post" action="/changeavatar">
+        <main class="mt-4" id="select-avatar">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="card-avatar d-flex flex-column mx-4">
+                        <div class="avatar-image">
+                            <img class="bd-placeholder-img card-img-top" width="125" height="125"
+                                src="static/img/daisy.png">
+                        </div>
+                        <div class="avatar-titulo">
+                            <p class="card-text text-center"> Miss Daisy is a baby chicken who is learning to fly. Yes,
+                                she is very cute! She
+                                comes running when called, but only if you have a cookie. </p>
+                        </div>
+                        <div class="avatar-rodape text-center">
+                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="Daisy"
+                                name="avatar" />
+                        </div>
+                    </div>
+                    <div class="card-avatar d-flex flex-column mx-4">
+                        <div class="avatar-image">
+                            <img class="bd-placeholder-img card-img-top" width="125" height="125"
+                                src="static/img/alfredo.png">
+                        </div>
+                        <div class="avatar-titulo">
+                            <p class="card-text text-center">Alfredo is a sweetheart, but every morning he pecks every
+                                other bird on the head.
+                                Other then morning, he will come when called. </p>
+                        </div>
+                        <div class="avatar-rodape text-center">
+                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="Alfredo"
+                                name="avatar" />
+                        </div>
+                    </div>
+                    <div class="card-avatar d-flex flex-column mx-4">
+                        <div class="avatar-image">
+                            <img class="bd-placeholder-img card-img-top" width="125" height="125"
+                                src="static/img/birdy.png">
+                        </div>
+                        <div class="avatar-titulo">
+                            <p class="card-text text-center"> Birdy is a baby bird who will sit on your lap and want
+                                your attention all day
+                                long. He is always right at your feet. Pet me! Pick me up! </p>
+                        </div>
+                        <div class="avatar-rodape text-center">
+                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="Birdy"
+                                name="avatar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </form>
+    {% include 'footer.html' %}
+</body>
+</html>
