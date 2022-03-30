@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include 'head.html' %}
+  <title>Dashboard</title>
+  <style>
+    .btn-dash:hover {
+      background: #3f1075d8 !important;
+      color: white;
+    }
+
+    .btn-dash {
+      background: #AA33FF !important;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <div class="container rounded bg-white mt-5 mb-5 w-50">
+    <div class="d-flex justify-content-center p-4">
+      <div class="border-right d-flex flex-column align-items-center me-4">
+        <img class="rounded-circle mt-5" width="150" src="../static/img/girl.jfif">
+        <span class="font-weight-bold">Me</span>
+      </div>
+      <div class="border-right mx-3">
+        <h4 class="text-right mb-5">User Dashboard &#128526</h4>
+        <div class="row">
+          <p class="m-0 p-0 col-4 fw-bold">Name:</p>
+          <p class="m-0 p-0 mx-3 col">{{ Name }}</p>
+        </div>
+        <div class="row">
+          <p class="m-0 p-0 col-4 fw-bold">Username:</p>
+          <p class="m-0 p-0 mx-3 col">{{ Username }}</p>
+        </div>
+        <div class="row">
+          <p class="m-0 p-0 col-4 fw-bold">Score:</p>
+          <p class="m-0 p-0 mx-3 col">{{ Score }}</p>
+        </div>
+        <div class="row">
+          <p class="m-0 p-0 col-4 fw-bold">Avatar:</p>
+          <p class="m-0 p-0 mx-3 col">{{ Avatar }}</p>
+        </div>
+        <div class="mt-4 text-center d-flex justify-content-center">
+          <a class="btn btn-primary profile-button"  href="/changeavatar">Change avatar</a>
+        </div>
+      </div>
+      <img class="square mt-5 ms-3" height="200" src="../static/img/tweety-wait.gif">
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+
+</html>

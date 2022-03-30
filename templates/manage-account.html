@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include 'head.html' %}
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <div class="container rounded bg-white mt-5 mb-5 w-50">
+    <div class="d-flex justify-content-center p-4">
+      <div class="border-right d-flex flex-column align-items-center me-4">
+        <img class="rounded-circle mt-5" width="150" src="../static/img/girl.jfif">
+        <span class="font-weight-bold">Me</span>
+      </div>
+      <div class="border-right mx-3">
+        <h4 class="text-right">Manage Account &#128526</h4>
+        <div class="form-group">
+          <label class="labels">Name</label>
+          <h6> {{ Name }} </h6>
+        </div>
+        <div class="form-group">
+          <label class="labels">Username</label>
+          <h6> {{ Username }} </h6>
+        </div>
+        <div class="form-group">
+          <label class="labels">Score</label>
+          <h6> {{ Email }} </h6>
+        </div>
+        <div class="mt-5 text-center d-flex justify-content-end">
+          <form action="\useraccount" method="post">
+            <button class="btn btn-danger profile-button" type="submit">Delete Account </button>
+          </form>
+        </div>
+      </div>
+      <img class="square mt-5 ms-3" height="150" src="../static/img/tweety-wait.gif">
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+
+</html>
