@@ -60,7 +60,7 @@ db.create_all() # assim esse comando só vai executar uma vez #
 
 dictio = {"users":[]}
 
-#==> Route to create an account  
+#==> Rota de cadastro de usuário (MINHA VERSAO 2)
 @app.route('/signup', methods=["POST", "GET"]) 
 def page_signup():
     if request.method=="POST":
@@ -79,7 +79,7 @@ def page_signup():
        
    #     return render_template('create-account.html')
 
-#==> Route to login ( VERSAO 3)
+#==> Rota de login ( VERSAO 3)
 @app.route('/login', methods=["POST", "GET"]) 
 def page_login():
     if request.method=="POST":
@@ -103,20 +103,76 @@ def page_login():
                 'Email':user_found.U_Email,
                 'Id': user_found.U_Id
                 }
-                  # storing userfound in the key "logged user" of the dictionary session, which is unique for each user. Then I can user it in another route                return render_template('user-dashboard.html', Name = user_found.U_Name, Username = user_found.U_Username, Avatar=user_found.U_CharacterName, Score=user_found.U_Score )
+                  # armazenando o userfound na chave "logged user" do dicionario session. Esse dicionário é unico para cada usuário. Depois disso já posso usar em outra rota
+                return render_template('user-dashboard.html', Name = user_found.U_Name, Username = user_found.U_Username, Avatar=user_found.U_CharacterName, Score=user_found.U_Score )
     if request.method=="GET":
         return render_template('index.html',user_not_found=False)  
 
+#==> Rota de jogo  
+@app.route('/playgame', methods=["POST", "GET"]) 
+def playing_game():
+    if request.method=="GET":
+        return render_template('playgame.html')  
+
+
+
+#==> Rota para about  
+@app.route('/about', methods=["POST", "GET"]) 
+def about():
+    if request.method=="GET":
+        return render_template('about.html')  
+
+#==> Rota para o privacy policy  
+@app.route('/privacy', methods=["POST", "GET"]) 
+def privacy():
+    if request.method=="GET":
+        return render_template('privacy-policy.html')  
+
+
+#==> Rota para mudar avatar 
+@app.route('/changeavatar', methods=["POST", "GET"]) 
+def change_avatar():
+### inserir o post 
+    if request.method=="GET":
+        return render_template('change-avatar.html') 
+
+
+#==> Rota para manage account  
+@app.route('/useraccount', methods=["POST", "GET"]) 
+def manageAccount():
+    if request.method=="GET":
+        # o user_found agora é um dicionário
+        user_found = session['logged_user']
+        return render_template('manage-account.html', Name = user_found['Name'], Username = user_found['Username'],Email = user_found['Email'])  
+
+    else:
+        if request.method=="POST":
+            # Vou deletar o campo Id do session['logged_user']
+            # Documentation => https://flask-sqlalchemy.palletsprojects.com/en/2.x/queries/
  
+            user_to_delete = session['logged_user']['Id']  
+
+            user_found_to_delete = CleverUsers.query.filter_by(U_Id= user_to_delete).first() #fazendo query no banco para pegar o user Id
+            db.session.delete(user_found_to_delete)
+            db.session.commit()
+            return index_html(True)
+
+# return redirect(url_for('/', deleted_user=True))
+#  return ('manage-account.html', deleted_user=True) 
+#==> Rota para talk to Tweety  
+@app.route('/tweety', methods=["POST", "GET"]) 
+def talk():
+    if request.method=="GET":
+        return render_template('tweety.html')  
+
 @app.get('/')
-def index_html(is_deleted=False): # fica falso por padrao e se torna true quando é feito o redicionamento chamando a funcao index.
+def index_html(is_deleted=False): # fica falso por padrao e se torna true na linhe 150 quando é feito o redicionamento chamando a funcao index.
     return render_template('index.html',variable = "Angelina",deleted_user=is_deleted)
 
- 
-
-
 if __name__== "__main__":
-    # create script only once
+    # create scrip only once
      
     app.run(debug=True)
 
+
+ 

@@ -28,6 +28,7 @@ https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212
 
 ============> GIT FLOW
 http://danielkummer.github.io/git-flow-cheatsheet/
+https://www.cygwin.com/setup-x86_64.exe
 
 
 
@@ -74,3 +75,4 @@ https://html-css-js.com/css/generator/box-shadow/
 
 
 ===>>> criando imagem e roda sql em container 
+
