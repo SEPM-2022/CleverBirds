@@ -26,6 +26,9 @@ https://github.com/aaarafat/JS-Flappy-Bird
 
 https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212
 
+============> GIT FLOW
+http://danielkummer.github.io/git-flow-cheatsheet/
+
 
 
 ============> SQL - Query
@@ -47,11 +50,27 @@ http://turing.com.br/material/flask/testing.html
 https://flask.palletsprojects.com/en/2.0.x/testing/
 
 
-''' 
-Creating virtual env: 
-1 - baixou a a bibl 
-2 virtualenv env
- env\scripts\activate
-3 - Set-ExecutionPolicy Unrestricted -Scope Process (dar permissao para o windows)
-4 - env\scripts\activate (ativa o ambiente)
- '''
+==> SQL Query
+
+CREATE DATABASE CleverBirds_MYDB;
+USE CleverBirds_MYDB;
+
+
+SELECT * FROM CleverBirds_MYDB.INFORMATION_SCHEMA.TABLES
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+SELECT * from clever_users;
+
+===> Docker
+https://www.macoratti.net/19/01/dock_mssql1.htm
+
+
+===>> password_hash
+werkzeug.security.check_password_hash(pwhash, password)¶
+
+
+===>> CSS
+https://html-css-js.com/css/generator/box-shadow/
+
+
+===>>> criando imagem e roda sql em container 

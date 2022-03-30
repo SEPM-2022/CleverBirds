@@ -6,9 +6,11 @@ body {
 body {
   background-image: url("../static/img/fundo.jpg");
 }
+
 .logo-cliver{
   background-color: transparent;
 }
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -47,4 +49,36 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.box{
+  cursor: pointer;
+}
+
+.box-navbar {
+  border: 2px solid rgb(66, 146, 115);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.box-navbar-links{
+  display: none;
+  position: absolute;
+  background-color: #1fb1d6d8;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  top: 50px;
+}
+.box-navbar-links a{
+  color:white;
+}
+
+.box:hover .box-navbar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  margin: 3px;
 }

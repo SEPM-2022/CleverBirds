@@ -16,8 +16,8 @@
       height: 320px;
       padding: 20px 40px;
       border-radius: 20px;
-      -webkit-box-shadow: -2px 0px 47px 6px #4CA4FF;
-      box-shadow: -2px 0px 47px 6px #4CA4FF;
+      -webkit-box-shadow: -1px 1px 11px -3px rgba(0, 0, 0, 0.91);
+      box-shadow: -1px 1px 11px -3px rgba(0, 0, 0, 0.91);
     }
 
     .img-piupiu img {
@@ -39,17 +39,23 @@
             <img src="../static/img/tweety-wait.gif" class="img-fluid profile-image-pic img-thumbnail my-3"
               width="180px" alt="profile">
           </div>
-          <form class="px-lg-3 py-lg-5 mt-5">
+          <form class="px-lg-3 py-lg-5 mt-5" action="\login" method="post">
             <div class="mb-3">
-              <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
-                placeholder="User Name">
+              <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name"
+                name="username">
             </div>
             <div class="mb-3">
-              <input type="password" class="form-control" id="password" placeholder="password">
+              <input type="password" class="form-control" id="password" placeholder="password" name="password">
             </div>
-            <a href="./user-dashboard.html" class="btn btn-success fw-bold px-5 mb-5 w-100"> Login </a>
-            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not Registered? <a
-                href="./create-account.html" class="text-dark fw-bold">Create an Account</a>
+            <input type="submit" class="btn btn-success fw-bold px-5 mb-5 w-100" value="Login">
+            {% if user_not_found %}
+              <p class="text-center text-danger">This user does not exist! Please create your account :)</p>
+            {% endif %}
+            {% if deleted_user %}
+              <p class="text-center text-danger">Your account has been successfully deleted. We are sorry to see you go.</p>
+            {% endif %}
+            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not Registered?&nbsp;<a href="/signup"
+                class="text-dark fw-bold">Create an Account</a>
             </div>
           </form>
         </div>

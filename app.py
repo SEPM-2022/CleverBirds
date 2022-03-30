@@ -1,7 +1,8 @@
-from flask import Flask, render_template,request 
+from flask import Flask, render_template,request, flash,session, redirect, url_for
 import urllib
 from flask_sqlalchemy import SQLAlchemy 
- 
+from werkzeug.security import generate_password_hash,check_password_hash
+import time
 
 app = Flask(__name__)
 
@@ -13,14 +14,18 @@ app = Flask(__name__)
 # connection string
 params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=host.docker.internal;DATABASE=CleverBirds_MYDB;UID=sa;PWD=#SenhadoSA123")
 app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/' # para ter acesso a det dados do usuário. 
+# O flask use a secret key para identificar quais cookies sao do usuário e quais nao sao 
+# É como se o flask assinasse os dados do usuário com essa senha do secret key 
+
 
 db = SQLAlchemy(app)
 
 class CleverUsers(db.Model):
     U_Id = db.Column(db.Integer, primary_key=True)
-    U_Name = db.Column(db.String(20), unique=False, nullable=False)
+    U_Name = db.Column(db.String(40), unique=False, nullable=False)
     U_Username = db.Column(db.String(20), unique=False, nullable=False)
-    U_Password = db.Column(db.String(20), unique=False, nullable=False)
+    U_Password = db.Column(db.String(120), unique=False, nullable=False)
     U_Email = db.Column(db.String(80), unique=False, nullable=False)
     U_Score = db.Column(db.String(20), unique=False, nullable=True)
     U_CharacterName = db.Column(db.String(20), unique=False, nullable=False)
@@ -28,7 +33,6 @@ class CleverUsers(db.Model):
 
     def __repr__(self):
         return '<UserID %r>' % self.U_Id
-
 
 class GameInstance(db.Model):
     GaI_Id = db.Column(db.Integer, primary_key=True)
@@ -49,22 +53,25 @@ class Music(db.Model):
         return '<MusicId %r>' % self.Mus_Id
  
  
-#db.create_all() # execute one time
+db.create_all() # assim esse comando só vai executar uma vez #
 
 
 # name, username, password, email, avatar, gender
 
 dictio = {"users":[]}
 
-#==> Route to create an account
+#==> Route to create an account  
 @app.route('/signup', methods=["POST", "GET"]) 
 def page_signup():
     if request.method=="POST":
         dados=request.form.to_dict()
         dictio["users"].append(dados)
+        # Generating password hash
+        password_hash= generate_password_hash(dados.get('password'))
         # testing to see if the user creating is working:  
-        new_user=CleverUsers(U_Name= dados.get('name'),U_Username=dados.get('username'),U_Password=dados.get('password'),U_Email=dados.get('email'),U_Score=dados.get('score'), U_CharacterName=dados.get('avatar'),U_Gender=dados.get('gender'))
+        new_user=CleverUsers(U_Name= dados.get('name'),U_Username=dados.get('username'),U_Password= password_hash,U_Email=dados.get('email'),U_Score=dados.get('score'), U_CharacterName=dados.get('avatar'),U_Gender=dados.get('gender'))
         db.session.add(new_user)
+        #precisa de commit para inserir 
         db.session.commit()
         return render_template('signup-success.html')
     if request.method=="GET":
@@ -72,19 +79,44 @@ def page_signup():
        
    #     return render_template('create-account.html')
 
-
-@app.get('/')
-def index_html():
-    return render_template('draft.html',variable = "Angelina")
-
-if __name__== "__main__":
-    # create scrip only once
-     
-    app.run(debug=True)
-
-
-
-
+#==> Route to login ( VERSAO 3)
+@app.route('/login', methods=["POST", "GET"]) 
+def page_login():
+    if request.method=="POST":
+        dados=request.form.to_dict()
+        dictio["users"].append(dados)
+        #print(dados)
+        # to check is the password is correct what we do is: check_password_hash(hash," - senha recebida p/ verificação - ")
+        user_found = CleverUsers.query.filter_by(U_Username= dados.get('username')).first()  # vai retornar o usuário 
+        print(user_found)
+        if user_found == None:
+            print("User not found")
+            return render_template('index.html',user_not_found=True) #using JInja in index.html
+        else:
+            if check_password_hash(user_found.U_Password, dados.get('password')): #essa funcao recebe o hash q quero verificar e a segunda eh a senha q o usuário digitou 
+                print("Usuário logado")
+                # A chave agora está recebendo um dicionário para poder usar na rota do manage account
+                session['logged_user'] = {'Name': user_found.U_Name,
+                'Username':  user_found.U_Name,
+                'Avatar':  user_found.U_CharacterName,
+                'Score':user_found.U_Score,
+                'Email':user_found.U_Email,
+                'Id': user_found.U_Id
+                }
+                  # storing userfound in the key "logged user" of the dictionary session, which is unique for each user. Then I can user it in another route                return render_template('user-dashboard.html', Name = user_found.U_Name, Username = user_found.U_Username, Avatar=user_found.U_CharacterName, Score=user_found.U_Score )
+    if request.method=="GET":
+        return render_template('index.html',user_not_found=False)  
 
  
+@app.get('/')
+def index_html(is_deleted=False): # fica falso por padrao e se torna true quando é feito o redicionamento chamando a funcao index.
+    return render_template('index.html',variable = "Angelina",deleted_user=is_deleted)
+
+ 
+
+
+if __name__== "__main__":
+    # create script only once
+     
+    app.run(debug=True)
 

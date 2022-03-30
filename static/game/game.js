@@ -14,7 +14,7 @@
         case state.gameOver :
             state.curr = state.getReady;
             bird.speed = 0;
-            bird.y = 100;
+            bird.y = 50;
             pipe.pipes=[];
             UI.score.curr = 0;
             SFX.played=false;
@@ -36,7 +36,7 @@
 	        case state.gameOver :
 	            state.curr = state.getReady;
 	            bird.speed = 0;
-	            bird.y = 100;
+	            bird.y = 50;
 	            pipe.pipes=[];
 	            UI.score.curr = 0;
 	            SFX.played=false;
@@ -90,7 +90,7 @@
  const pipe = {
      top : {sprite : new Image()},
      bot : {sprite : new Image()},
-     gap:85,
+     gap:85, // how wide the tube is I think
      moved: true,
      pipes : [],
      draw : function(){
@@ -130,7 +130,7 @@
         ],
     rotatation : 0,
     x : 50,
-    y :100,
+    y :50,
     speed : 0,
     gravity : .125,
     thrust : 3.6,
@@ -217,6 +217,7 @@
                 if(this.y - r <= roof || this.y + r>= floor)
                 {
                     SFX.hit.play();
+                    // TEST HERE
                     return true;
                 }
 

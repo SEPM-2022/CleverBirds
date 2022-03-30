@@ -97,79 +97,9 @@
 
 <body>
     {% include 'header.html' %}
-    <div class="breadcrumb-login mt-5 d-flex align-items-center justify-content-center">
-        <div id="login-breadcrumb" class="breadcrumb-ativo breadcrumb-objeto first-bread">Step 1 - Create Your Profile
-        </div>
-        <div id="choose-avatar-breadcrumb" class="breadcrumb-objeto last-bread">Step 2 - Choose Your Avatar</div>
-    </div>
-    <form id="carrossel" method="post" action="/signup">
-        <div id="info-user">
-            <div class="container rounded bg-white mt-5 mb-5">
-                <div class="row">
-                    <div class="col-md-3 border-right">
-                        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                            <img class="rounded-circle mt-5" width="150" id="avatar-img" src="static/img/girl.jfif">
-                            <span class="font-weight-bold">Me</span>
-                        </div>
-                    </div>
-                    <div class="col-md-5 border-right">
-                        <div class="p-3 py-5">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4 class="text-right">Create your profile &#128526</h4>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-12">
-                                    <label class="labels">Name</label>
-                                    <input type="text" class="form-control" placeholder="Type your name" value=""
-                                        name="name">
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="labels">Password</label>
-                                    <input type="password" class="form-control" placeholder="Type your password"
-                                        value="" name="password">
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="labels">User name</label>
-                                    <input type="text" class="form-control" placeholder="Type your username" value=""
-                                        name="username">
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="labels">Email</label>
-                                    <input type="text" class="form-control" placeholder="Type your email" value=""
-                                        name="email">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mt-2">
-                                <label class="labels">Choose if you are:</label>
-                                <div class="d-flex">
-                                    <div class="">
-                                        <input type="radio" id="boy" name="gender" value="boy" checked>
-                                        <label for="boy">Boy</label>
-                                    </div>
-                                    <div class="mx-3">
-                                        <input type="radio" id="girl" name="gender" value="girl" checked>
-                                        <label for="girl">Girl</label>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mt-5 text-center">
-                                <button class="btn btn-primary profile-button btn-next" onclick="chooseAvatar()"
-                                    type="button">Next Step</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md-3 border-right px-3">
-                            <div class=" flex-column align-items-center text-center p-3 py-5">
-                                <img class="square mt-5" width="150" src="static/img/tweety-wait.gif">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <main class="mt-4 d-none" id="select-avatar">
+    <h3 class="text-center mt-5 mb-3">Change Your Avatar &#128526</h4>
+    <form id="carrossel" method="post" action="/changeavatar">
+        <main class="mt-4" id="select-avatar">
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="card-avatar d-flex flex-column mx-4">
@@ -222,23 +152,5 @@
         </main>
     </form>
     {% include 'footer.html' %}
-    <script>
-        function chooseAvatar() {
-            document.getElementById('info-user').classList.add('d-none')
-            document.getElementById('select-avatar').classList.remove('d-none')
-
-            document.getElementById('choose-avatar-breadcrumb').classList.add('breadcrumbs-ativo')
-            document.getElementById('login-breadcrumb').classList.remove('breadcrumbs-ativo')
-        }
-
-        document.getElementById('girl').addEventListener('change', function () {
-            document.getElementById('avatar-img').src = 'static/img/girl.jfif'
-        });
-
-        document.getElementById('boy').addEventListener('change', function () {
-            document.getElementById('avatar-img').src = 'static/img/boy.png'
-        });
-    </script>
 </body>
-
 </html>
