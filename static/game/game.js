@@ -125,8 +125,8 @@
         [
             {sprite : new Image()},
             {sprite : new Image()},
-            {sprite : new Image()},
-            {sprite : new Image()},
+            // {sprite : new Image()},
+            // {sprite : new Image()},
         ],
     rotatation : 0,
     x : 50,
@@ -160,6 +160,7 @@
                 if(this.y + r  >= gnd.y||this.collisioned())
                 {
                     state.curr = state.gameOver;
+                    // TODO send score to a route
                 }
                 
                 break;
@@ -308,23 +309,25 @@
 
  };
 
-gnd.sprite.src="img/ground.png";
-bg.sprite.src="img/BG.png";
-pipe.top.sprite.src="img/toppipe.png";
-pipe.bot.sprite.src="img/botpipe.png";
-UI.gameOver.sprite.src="img/go.png";
-UI.getReady.sprite.src="img/getready.png";
-UI.tap[0].sprite.src="img/tap/t0.png";
-UI.tap[1].sprite.src="img/tap/t1.png";
-bird.animations[0].sprite.src="img/bird/b0.png";
-bird.animations[1].sprite.src="img/bird/b1.png";
-bird.animations[2].sprite.src="img/bird/b2.png";
-bird.animations[3].sprite.src="img/bird/b0.png";
-SFX.start.src = "sfx/start.wav"
-SFX.flap.src = "sfx/flap.wav"
-SFX.score.src = "sfx/score.wav"
-SFX.hit.src = "sfx/hit.wav"
-SFX.die.src = "sfx/die.wav"
+gnd.sprite.src="static/game/img/ground.png";
+bg.sprite.src="static/game/img/BG.png";
+pipe.top.sprite.src="static/game/img/toppipe.png";
+pipe.bot.sprite.src="static/game/img/botpipe.png";
+UI.gameOver.sprite.src="static/game/img/go.png";
+UI.getReady.sprite.src="static/game/img/getready.png";
+UI.tap[0].sprite.src="static/game/img/tap/t0.png";
+UI.tap[1].sprite.src="static/game/img/tap/t1.png";
+// bird.animations[0].sprite.src="static/game/img/bird/def-1.png";
+// bird.animations[1].sprite.src="static/game/img/bird/b1.png";
+// bird.animations[2].sprite.src="static/game/img/bird/def-2.png";
+// bird.animations[3].sprite.src="static/game/img/bird/def-1.png";
+SFX.start.src = "static/game/sfx/start.wav"
+SFX.flap.src = "static/game/sfx/flap.wav"
+SFX.score.src = "static/game/sfx/score.wav"
+SFX.hit.src = "static/game/sfx/hit.wav"
+SFX.die.src = "static/game/sfx/die.wav"
+initGame(bird)
+
 
 gameLoop();
 
