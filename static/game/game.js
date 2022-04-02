@@ -75,7 +75,7 @@
      update : function() {
         if(state.curr != state.Play) return;
         this.x -= dx;
-        this.x = this.x % (this.sprite.width/2);    
+        this.x = this.x % (this.sprite.width/2);
     }
  };
  const bg = {
@@ -157,14 +157,20 @@
                 this.y += this.speed;
                 this.setRotation()
                 this.speed += this.gravity;
-                if(this.y + r  >= gnd.y||this.collisioned())
-                {
+                if(this.y + r  >= gnd.y||this.collisioned()) {
                     state.curr = state.gameOver;
-                    // TODO send score to a route
+                    fetch('save-score/' + UI.score.curr)
+                        .then((response) => {
+                            if (!response.ok) {
+                                console.error("Error during score saving")
+                            } else {
+                                console.log("Score saved for current user")
+                            }
+                        });
                 }
-                
+
                 break;
-            case state.gameOver : 
+            case state.gameOver :
                 this.frame = 1;
                 if(this.y + r  < gnd.y) {
                     this.y += this.speed;
@@ -180,10 +186,10 @@
                     SFX.played = true;
                 }
                 }
-                
+
                 break;
         }
-        this.frame = this.frame%this.animations.length;       
+        this.frame = this.frame%this.animations.length;
     },
     flap : function(){
         if(this.y > 0)
@@ -195,7 +201,7 @@
     setRotation : function(){
         if(this.speed <= 0)
         {
-            
+
             this.rotatation = Math.max(-25, -25 * this.speed/(-1*this.thrust));
         }
         else if(this.speed > 0 ) {
@@ -230,8 +236,8 @@
                 pipe.moved = false;
             }
 
-            
-                
+
+
         }
     }
  };
@@ -297,7 +303,7 @@
                         sctx.fillText(sc,scrn.width/2-85,scrn.height/2+15);
                         sctx.strokeText(sc,scrn.width/2-85,scrn.height/2+15);
                     }
-                    
+
                 break;
         }
     },
@@ -332,7 +338,7 @@ initGame(bird)
 gameLoop();
 
  function gameLoop()
- { 
+ {
      update();
      draw();
      frames++;
@@ -341,7 +347,7 @@ gameLoop();
 
  function update()
  {
-  bird.update();  
+  bird.update();
   gnd.update();
   pipe.update();
   UI.update();
@@ -352,7 +358,7 @@ gameLoop();
     sctx.fillRect(0,0,scrn.width,scrn.height)
     bg.draw();
     pipe.draw();
-    
+
     bird.draw();
     gnd.draw();
     UI.draw();
