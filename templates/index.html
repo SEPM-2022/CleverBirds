@@ -48,9 +48,13 @@
               <input type="password" class="form-control" id="password" placeholder="password" name="password">
             </div>
             <input type="submit" class="btn btn-success fw-bold px-5 mb-5 w-100" value="Login">
-            {% if user_not_found %}
-              <p class="text-center text-danger">This user does not exist! Please create your account :)</p>
-            {% endif %}
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                 <p class="text-center text-danger">{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
             {% if deleted_user %}
               <p class="text-center text-danger">Your account has been successfully deleted. We are sorry to see you go.</p>
             {% endif %}
