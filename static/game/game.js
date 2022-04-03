@@ -75,7 +75,7 @@
      update : function() {
         if(state.curr != state.Play) return;
         this.x -= dx;
-        this.x = this.x % (this.sprite.width/2);    
+        this.x = this.x % (this.sprite.width/2);
     }
  };
  const bg = {
@@ -125,8 +125,8 @@
         [
             {sprite : new Image()},
             {sprite : new Image()},
-            {sprite : new Image()},
-            {sprite : new Image()},
+            // {sprite : new Image()},
+            // {sprite : new Image()},
         ],
     rotatation : 0,
     x : 50,
@@ -157,13 +157,20 @@
                 this.y += this.speed;
                 this.setRotation()
                 this.speed += this.gravity;
-                if(this.y + r  >= gnd.y||this.collisioned())
-                {
+                if(this.y + r  >= gnd.y||this.collisioned()) {
                     state.curr = state.gameOver;
+                    fetch('save-score/' + UI.score.curr)
+                        .then((response) => {
+                            if (!response.ok) {
+                                console.error("Error during score saving")
+                            } else {
+                                console.log("Score saved for current user")
+                            }
+                        });
                 }
-                
+
                 break;
-            case state.gameOver : 
+            case state.gameOver :
                 this.frame = 1;
                 if(this.y + r  < gnd.y) {
                     this.y += this.speed;
@@ -179,10 +186,10 @@
                     SFX.played = true;
                 }
                 }
-                
+
                 break;
         }
-        this.frame = this.frame%this.animations.length;       
+        this.frame = this.frame%this.animations.length;
     },
     flap : function(){
         if(this.y > 0)
@@ -194,7 +201,7 @@
     setRotation : function(){
         if(this.speed <= 0)
         {
-            
+
             this.rotatation = Math.max(-25, -25 * this.speed/(-1*this.thrust));
         }
         else if(this.speed > 0 ) {
@@ -229,8 +236,8 @@
                 pipe.moved = false;
             }
 
-            
-                
+
+
         }
     }
  };
@@ -296,7 +303,7 @@
                         sctx.fillText(sc,scrn.width/2-85,scrn.height/2+15);
                         sctx.strokeText(sc,scrn.width/2-85,scrn.height/2+15);
                     }
-                    
+
                 break;
         }
     },
@@ -308,28 +315,30 @@
 
  };
 
-gnd.sprite.src="img/ground.png";
-bg.sprite.src="img/BG.png";
-pipe.top.sprite.src="img/toppipe.png";
-pipe.bot.sprite.src="img/botpipe.png";
-UI.gameOver.sprite.src="img/go.png";
-UI.getReady.sprite.src="img/getready.png";
-UI.tap[0].sprite.src="img/tap/t0.png";
-UI.tap[1].sprite.src="img/tap/t1.png";
-bird.animations[0].sprite.src="img/bird/b0.png";
-bird.animations[1].sprite.src="img/bird/b1.png";
-bird.animations[2].sprite.src="img/bird/b2.png";
-bird.animations[3].sprite.src="img/bird/b0.png";
-SFX.start.src = "sfx/start.wav"
-SFX.flap.src = "sfx/flap.wav"
-SFX.score.src = "sfx/score.wav"
-SFX.hit.src = "sfx/hit.wav"
-SFX.die.src = "sfx/die.wav"
+gnd.sprite.src="static/game/img/ground.png";
+bg.sprite.src="static/game/img/BG.png";
+pipe.top.sprite.src="static/game/img/toppipe.png";
+pipe.bot.sprite.src="static/game/img/botpipe.png";
+UI.gameOver.sprite.src="static/game/img/go.png";
+UI.getReady.sprite.src="static/game/img/getready.png";
+UI.tap[0].sprite.src="static/game/img/tap/t0.png";
+UI.tap[1].sprite.src="static/game/img/tap/t1.png";
+// bird.animations[0].sprite.src="static/game/img/bird/def-1.png";
+// bird.animations[1].sprite.src="static/game/img/bird/b1.png";
+// bird.animations[2].sprite.src="static/game/img/bird/def-2.png";
+// bird.animations[3].sprite.src="static/game/img/bird/def-1.png";
+SFX.start.src = "static/game/sfx/start.wav"
+SFX.flap.src = "static/game/sfx/flap.wav"
+SFX.score.src = "static/game/sfx/score.wav"
+SFX.hit.src = "static/game/sfx/hit.wav"
+SFX.die.src = "static/game/sfx/die.wav"
+initGame(bird)
+
 
 gameLoop();
 
  function gameLoop()
- { 
+ {
      update();
      draw();
      frames++;
@@ -338,7 +347,7 @@ gameLoop();
 
  function update()
  {
-  bird.update();  
+  bird.update();
   gnd.update();
   pipe.update();
   UI.update();
@@ -349,7 +358,7 @@ gameLoop();
     sctx.fillRect(0,0,scrn.width,scrn.height)
     bg.draw();
     pipe.draw();
-    
+
     bird.draw();
     gnd.draw();
     UI.draw();

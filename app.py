@@ -116,7 +116,13 @@ def page_login():
 @app.route('/playgame', methods=["POST", "GET"])
 def playing_game():
     if request.method == "GET":
-        return render_template('playgame.html')
+        user = session.get('logged_user')
+        if user is None:
+            bird = "def"
+        else:
+            bird = user['Avatar']
+
+        return render_template('playgame.html', bird_png=bird)
 
 
 @app.route('/about', methods=["POST", "GET"])
