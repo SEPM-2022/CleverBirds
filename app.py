@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, session, redirect, flash
+from flask import Flask, render_template, request, session, redirect, flash, make_response
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -35,11 +35,11 @@ class CleverUsers(db.Model):
 
 class GameInstance(db.Model):
     GaI_Id = db.Column(db.Integer, primary_key=True)
-    GaI_User_Id = db.Column(db.String(80), unique=False, nullable=False)
+    GaI_user_id = db.Column(db.String(80), unique=False, nullable=False)
     GaI_date = db.Column(db.String(120), unique=False, nullable=False)
 
     def __repr__(self):
-        return '<UserID %r>' % self.GaI_User_Id
+        return '<UserID %r>' % self.GaI_user_id
 
 
 class Music(db.Model):
@@ -97,13 +97,7 @@ def page_login():
             flash("This user does not exist! Please create your account :)")
         else:
             if check_password_hash(user.U_Password, form.get('password')):
-                session['logged_user'] = {'Name': user.U_Name,
-                                          'Username': user.U_Name,
-                                          'Avatar': user.U_CharacterName,
-                                          'Score': user.U_Score,
-                                          'Email': user.U_Email,
-                                          'Id': user.U_Id
-                                          }
+                session['logged_user'] = user.U_Id
 
                 return render_template('user-dashboard.html', Name=user.U_Name, Username=user.U_Username,
                                        Avatar=user.U_CharacterName, Score=user.U_Score)
@@ -116,11 +110,12 @@ def page_login():
 @app.route('/playgame', methods=["POST", "GET"])
 def playing_game():
     if request.method == "GET":
-        user = session.get('logged_user')
-        if user is None:
+        user_id = session.get('logged_user')
+        user = CleverUsers.query.filter_by(U_Id=user_id).first()
+        if user is None or user.U_CharacterName is None:
             bird = "def"
         else:
-            bird = user['Avatar']
+            bird = user.U_CharacterName
 
         return render_template('playgame.html', bird_png=bird)
 
@@ -155,12 +150,22 @@ def manage_account():
 
     else:
         if request.method == "POST":
-            user_to_delete = session['logged_user']['Id']
+            user_to_delete = session['logged_user']
             user_found_to_delete = CleverUsers.query.filter_by(U_Id=user_to_delete).first()
             db.session.delete(user_found_to_delete)
             db.session.commit()
             flash("Your account has been successfully deleted. We are sorry to see you go.")
             return redirect('/')
+
+
+@app.route('/save-score/<score>', methods=["GET"])
+def save_score(score):
+    user_id = session['logged_user']
+    user = CleverUsers.query.filter_by(U_Id=user_id).first()
+    user.U_Score = score
+    db.session.add(user)
+    db.session.commit()
+    return make_response("OK", 200)
 
 
 @app.route('/tweety', methods=["POST", "GET"])
