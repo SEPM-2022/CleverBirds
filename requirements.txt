@@ -4,11 +4,9 @@ distlib==0.3.4
 filelock==3.6.0
 Flask==2.1.1
 Flask-SQLAlchemy==2.5.1
-greenlet==1.1.2
 itsdangerous==2.1.2
 Jinja2==3.1.1
 MarkupSafe==2.1.1
 six==1.16.0
 SQLAlchemy==1.4.34
-virtualenv==20.13.4
 Werkzeug==2.1.1
