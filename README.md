@@ -1,6 +1,5 @@
- <h1>Clever Birds</h1>
- </h2>Embracing Your Children’s Passion for Video Games</h2>
-
+ <h1>Clever Birds: Embracing Your Children’s Passion for Video Games </h1>
+ 
 Clever Birds is a game based on the Flappy Bird game. The difference is that in Clever Birds the user is able to choose three avatars: Daisy, Alfredo and Birdy and be provided informative information by means of a chatbot. The gameplay requires the player to navigate the little bird through gaps between the pipes without hitting them, continuously earning a point as he/she passes through each pipe.
 
 :arrow_forward: Duration : 3 months
