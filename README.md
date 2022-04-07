@@ -9,9 +9,7 @@ Clever Birds is a game based on the Flappy Bird game. The difference is that in 
 <h3>Currently in progress ! 💻</h3>
 
 > :round_pushpin: Goals to be achieved: 
-> * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing.
-> *   
-> * Implement testing using [Pytest](https://docs.pytest.org/en/6.2.x/contents.html).
+> * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing. 
  
  <h1>Table of Contents</h1>
 
@@ -93,14 +91,14 @@ into three main logical components: model (data), view (user interface), and con
 * Controller => In the file with x controllers:  
 
 > :radio_button: We have eight routes, with the following features: 
-> * :arrow_forward: 1 - user registration (users can registrate by providing name, username, email and password) 
-> * :arrow_forward: 2 - user login (users can registrate by providing username and password) 
-> * :arrow_forward: 3 - game (users can play Clever Birds) 
-> * :arrow_forward: 4 - change avatar (will allow users to change the avatar)
-> * :arrow_forward: 5 - manage account (will allow users to see in their profile their information and allow them to delete their account and data from our database)
-> * :arrow_forward: 6 - talk to tweety (will allow users to speak to our chatbot "Tweety")
-> * :arrow_forward: 7 - about (will inform how to use the platform) 
-> * :arrow_forward: 8 - privacy policy (will inform users of the personal data we collect when they access/use the Website and how we protect their personal data)
+>  :arrow_forward: 1 - user registration (users can registrate by providing name, username, email and password) 
+>  :arrow_forward: 2 - user login (users can registrate by providing username and password) 
+>  :arrow_forward: 3 - game (users can play Clever Birds) 
+>  :arrow_forward: 4 - change avatar (will allow users to change the avatar)
+>  :arrow_forward: 5 - manage account (will allow users to see in their profile their information and allow them to delete their account and data from our database)
+>  :arrow_forward: 6 - talk to tweety (will allow users to speak to our chatbot "Tweety")
+>  :arrow_forward: 7 - about (will inform how to use the platform) 
+>  :arrow_forward: 8 - privacy policy (will inform users of the personal data we collect when they access/use the Website and how we protect their personal data)
 
 
 ![print](/readme_img/swagger_print.PNG)  
