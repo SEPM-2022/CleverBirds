@@ -306,4 +306,7 @@ To take this project further:
  
 [GIT FLOW](http://danielkummer.github.io/git-flow-cheatsheet/)
 
+[GIT FLOW Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+
   
