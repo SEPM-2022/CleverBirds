@@ -273,10 +273,7 @@ Here is how we will implement secure user authentication system using the Python
 > :white_check_mark:Passwords stored as hash are irreversible to plaintext (one way hash).
 > :white_check_mark:With a given hash, attackers cannot guess the plaintext.  
  
-
-<h3>C10:  Handle All Errors and Exceptions</h3>  
-
-Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) in various ways. Handling exceptions and errors correctly is critical to making your code reliable and secure. The try block lets you test a block of code for errors. The except block lets you handle the error.  
+ 
 
 ## 13. Testing
 
