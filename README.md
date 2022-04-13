@@ -167,7 +167,6 @@ The following directory diagram was generated with the following command in the 
 * `README.md` [README.md](https://github.com/SEPM-2022/CleverBirds/blob/develop/README.md)- Contains the description and documentation of the project. 
 * `app.py` [app.py](https://github.com/SEPM-2022/CleverBirds/blob/develop/app.py) - Creates the database and defines all the routes.   
 * `Dockerfile`[Dockerfile](https://github.com/SEPM-2022/CleverBirds/blob/develop/Dockerfile) - Docker config file to build a Docker image.
-* `common_passwords.py` [common_passwords.py](https://github.com/alicevillar/sfa_api/blob/main/useful/common_passwords) - File containing the 1000 most common passwords. 
 * `application_structure.py` [application_structure.py](https://github.com/alicevillar/sfa_api/blob/main/application_structure.py) - Directory tree structure in Python.
 * `requirements.txt` [requirements.txt](https://github.com/SEPM-2022/CleverBirds/blob/develop/requirements.txt) - The list of Python (PyPi) requirements. Script: 1) pip install pipreqs; 2) pipreqs --encoding=utf8 C:\Users\Alice\PycharmProjects\SFA_DB 
 
