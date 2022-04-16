@@ -190,12 +190,24 @@ The following directory diagram was generated with the following command in the 
 * [**JIRA**](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=89541890822&campaign=9124878120&creative=542569520122&device=c&keyword=jira%20project%20management%20software&matchtype=e&network=g&placement=&ds_kids=p51241495749&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAjw9LSSBhBsEiwAKtf0n46U4jUddN6hDaMFm69grPXSOFett05-wHANMVWGpSxsxZ8G_RdhwxoC6moQAvD_BwE&gclsrc=aw.ds) - used for project management. 
 
 
-## 10. Installation  
- 
- 
-<h3>Using Docker</h3>
+## 10. Installation
 
-It's easy to start exploring our platform using Docker:
+### Using python
+We suggest to setup a virtual environment first.
+
+```
+$ pip install -r requirements.txt
+
+$ flask run
+```
+ 
+### Using docker
+
+```
+$ docker build -t clever-bird .
+
+$ docker run -d -p 5000:5000 clever-bird
+``` 
  
   
 ## 11. Quick Start  
