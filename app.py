@@ -141,7 +141,10 @@ def change_avatar():
 @app.route('/useraccount', methods=["POST", "GET"])
 def manage_account():
     if request.method == "GET":
-        user = session.get('logged_user')
+
+        user_id = session.get('logged_user')
+        user = CleverUsers.query.filter_by(U_Id=user_id).first()
+
         if user is None:
             return redirect('/')
 
