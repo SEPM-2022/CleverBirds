@@ -66,6 +66,12 @@ def page_login():
                                        Avatar=user.U_CharacterName, Score=user.U_Score)
             else:
                 flash("Wrong username/password.")
+    elif request.method == "GET":
+        user_id = session.get('logged_user')
+        user = CleverUsers.query.filter_by(U_Id=user_id).first()
+        if user is not None:
+            return render_template('user-dashboard.html', Name=user.U_Name, Username=user.U_Username,
+                                   Avatar=user.U_CharacterName, Score=user.U_Score)
 
     return render_template('index.html')
 
@@ -99,6 +105,14 @@ def privacy():
 def change_avatar():
     if request.method == "GET":
         return render_template('change-avatar.html')
+    else:
+        form = request.form.to_dict()
+
+        user_id = session.get('logged_user')
+        user = CleverUsers.query.filter_by(U_Id=user_id).first()
+        user.U_CharacterName = form['avatar']
+        db.session.commit()
+        return redirect('/login')
 
 
 @app.route('/useraccount', methods=["POST", "GET"])
@@ -129,7 +143,6 @@ def save_score(score):
     user_id = session['logged_user']
     user = CleverUsers.query.filter_by(U_Id=user_id).first()
     user.U_Score = score
-    db.session.add(user)
     db.session.commit()
     return make_response("OK", 200)
 
