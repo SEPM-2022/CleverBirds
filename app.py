@@ -111,8 +111,8 @@ def manage_account():
         if user is None:
             return redirect('/')
 
-        return render_template('manage-account.html', Name=user['Name'], Username=user['Username'],
-                               Email=user['Email'])
+        return render_template('manage-account.html', Id=user.U_Id, Name=user.U_Name, Username=user.U_Username,
+                               Email=user.U_Email, Score=user.U_Score)
 
     else:
         if request.method == "POST":
