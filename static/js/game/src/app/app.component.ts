@@ -6,7 +6,7 @@ import {
   Inject,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -63,8 +63,7 @@ export class AppComponent implements AfterViewInit {
       }
 
       if (this.birdX + this.bird.width >= pipe.x && this.birdX <= pipe.x + this.p1.width && (this.birdY <= pipe.y + this.p1.height || this.birdY + this.bird.height >= pipe.y + this.constant) || this.birdY + this.bird.height >= this.canvas.height - this.fg.height) {
-        window.location.href = '/game-over';
-
+        window.location.href = window.location.search;
       }
 
       if (pipe.x == 5) {
@@ -85,17 +84,23 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.canvas = document.getElementById('canvas');
-    this.context = this.canvas.getContext('2d');
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const params = new URLSearchParams(window.location.search)
+        const bird = params.get('bird');
+        this.canvas = document.getElementById('canvas');
+        this.context = this.canvas.getContext('2d');
 
-    this.pipe[0] = { x: this.canvas.width, y: 0 };
+        this.pipe[0] = { x: this.canvas.width, y: 0 };
 
-    this.bird.src = '/assets/img/bird.png';
-    this.bg.src = '/assets/img/bg.png';
-    this.fg.src = '/assets/img/fg.png';
-    this.p1.src = '/assets/img/pipeNorth.png';
-    this.p2.src = '/assets/img/pipeSouth.png';
+        this.bird.src = bird ? `/assets/img/${bird}.png` : '/assets/img/bird.png';
+        this.bg.src = '/assets/img/bg.png';
+        this.fg.src = '/assets/img/fg.png';
+        this.p1.src = '/assets/img/pipeNorth.png';
+        this.p2.src = '/assets/img/pipeSouth.png';
 
-    this.draw();
+        this.draw();
+      }
+    });
   }
 }
