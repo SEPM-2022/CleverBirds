@@ -35,7 +35,7 @@ export class AppComponent implements AfterViewInit {
 
   constructor(@Inject(DOCUMENT) document: Document, private router: Router) {}
 
-  @HostListener('mousedown', ['$event'])
+  @HostListener('document:mousedown', ['$event'])
   @HostListener('document:keydown', ['$event'])
   onMouseDown(e: any) {
     this.moveUp();

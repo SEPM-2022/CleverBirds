@@ -9,5 +9,14 @@
 </head>
 <body>
   <app-root></app-root>
+<script>
+  window.addEventListener('message', e => {
+    if (e.data.type === 'keydown') {
+      document.dispatchEvent(new KeyboardEvent('keydown'));
+    } else if (e.data.type === 'mousedown') {
+      document.dispatchEvent(new MouseEvent('mousedown'));
+    }
+  });
+</script>
 </body>
 </html>
