@@ -1,19 +1,21 @@
-
 from flask import Flask, render_template, request, session, make_response
+# from flask_login import current_user, login_user
 from app import app 
 from models.clever_users import *
 
 @app.route('/playgame', methods=["POST", "GET"])
 def playing_game():
-    if request.method == "GET":
-        user_id = session.get('logged_user')
-        user = CleverUsers.query.filter_by(U_Id=user_id).first()
-        if user is None or user.U_CharacterName is None:
-            bird = "def"
-        else:
-            bird = user.U_CharacterName
+    bird = 'birdy'
+    try:
+        if request.method == "GET":
+            user_id = session.get('logged_user')['Id']
 
-        return render_template('playgame.html', bird_png=bird)
+            user = CleverUsers.query.filter_by(U_Id=user_id).first()
+            if user is not None and user.U_CharacterName is not None:
+                bird = user.U_CharacterName
+    except Exception as error:
+        print(error)
+    return render_template('playgame.html', bird=bird)
 
 
 @app.route('/save-score/<score>', methods=["GET"])
