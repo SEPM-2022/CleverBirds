@@ -1,7 +1,4 @@
 <ng-container *ngIf="state === 'started'">
   <canvas id="canvas" width="864" height="512"></canvas>
 </ng-container>
-<ng-container *ngIf="state === 'gameover'">
-  Game over, restarting... <br>
-  Last score: {{score}}
-</ng-container>
+<app-game-over *ngIf="state === 'gameover'" [score]="score"></app-game-over>

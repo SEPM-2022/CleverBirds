@@ -21,7 +21,19 @@
     });
     document.addEventListener('mousedown', () => {
         gameElement.contentWindow.postMessage({type: 'mousedown'}, '*');
-    })
+    });
+    window.addEventListener('message', (e) => {
+        if (e.data.score) {
+            fetch('save-score/' + e.data.score)
+                .then((response) => {
+                    if (!response.ok) {
+                        console.error("Error during score saving")
+                    } else {
+                        console.log("Score saved for current user")
+                    }
+                });
+        }
+    });
 </script>
 </body>
 </html>

@@ -47,10 +47,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   draw(): void {
-    console.log('draw');
     this.context.drawImage(this.bg, 0, 0);
-    this.context.drawImage(this.bg, 288, 0);
-    this.context.drawImage(this.bg, 576, 0);
 
     this.pipe.every(pipe => {
       this.constant = this.pipeNorth.height + this.gap;
@@ -90,7 +87,7 @@ export class AppComponent implements AfterViewInit {
     this.context.drawImage(this.bird, this.birdX, this.birdY);
     this.birdY += this.gravity;
 
-    this.context.fillStyle = 'steelblue';
+    this.context.fillStyle = 'cyan';
     this.context.font = '40px Verdana';
 
     this.context.fillText('Score : ' + this.score, 10, this.canvas.height - 20)
@@ -109,10 +106,10 @@ export class AppComponent implements AfterViewInit {
         this.pipe[0] = { x: this.canvas.width, y: 0 };
 
         this.bird.src = bird ? `/assets/img/${bird}.png` : '/assets/img/bird.png';
-        this.bg.src = '/assets/img/bg.png';
-        this.fg.src = '/assets/img/fg.png';
-        this.pipeNorth.src = '/assets/img/pipeNorth.png';
-        this.pipeSouth.src = '/assets/img/pipeSouth.png';
+        this.bg.src = '/assets/img/bg2_small.png';
+        this.fg.src = '/assets/img/fg_edited.png';
+        this.pipeNorth.src = '/assets/img/pipeNorth_edited.png';
+        this.pipeSouth.src = '/assets/img/pipeSouth_edited.png';
 
         this.draw();
       }
