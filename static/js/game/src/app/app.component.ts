@@ -1,6 +1,6 @@
 import {
   AfterViewInit,
-  ChangeDetectionStrategy,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   HostListener,
   Inject,
@@ -20,8 +20,8 @@ export class AppComponent implements AfterViewInit {
   bird = new Image();
   bg = new Image();
   fg = new Image();
-  p1 = new Image();
-  p2 = new Image();
+  pipeNorth = new Image();
+  pipeSouth = new Image();
   canvas: any;
   context: any;
   constant: any;
@@ -32,8 +32,9 @@ export class AppComponent implements AfterViewInit {
   birdX = 10;
   birdY = 150;
   pipe: any[] = [];
+  state: string = 'started'
 
-  constructor(@Inject(DOCUMENT) document: Document, private router: Router) {}
+  constructor(@Inject(DOCUMENT) document: Document, private router: Router, private cdr: ChangeDetectorRef) {}
 
   @HostListener('document:mousedown', ['$event'])
   @HostListener('document:keydown', ['$event'])
@@ -46,32 +47,46 @@ export class AppComponent implements AfterViewInit {
   }
 
   draw(): void {
+    console.log('draw');
     this.context.drawImage(this.bg, 0, 0);
+    this.context.drawImage(this.bg, 288, 0);
+    this.context.drawImage(this.bg, 576, 0);
 
-    this.pipe.forEach(pipe => {
-      this.constant = this.p1.height + this.gap;
-      this.context.drawImage(this.p1, pipe.x, pipe.y);
-      this.context.drawImage(this.p2, pipe.x, pipe.y + this.constant);
+    this.pipe.every(pipe => {
+      this.constant = this.pipeNorth.height + this.gap;
+      this.context.drawImage(this.pipeNorth, pipe.x, pipe.y);
+      this.context.drawImage(this.pipeSouth, pipe.x, pipe.y + this.constant);
 
       pipe.x--;
 
       if (pipe.x == 10) {
         this.pipe.push({
           x: this.canvas.width,
-          y: Math.floor(Math.random() * this.p1.height) - this.p1.height
+          y: Math.floor(Math.random() * this.pipeNorth.height) - this.pipeNorth.height
         });
       }
 
-      if (this.birdX + this.bird.width >= pipe.x && this.birdX <= pipe.x + this.p1.width && (this.birdY <= pipe.y + this.p1.height || this.birdY + this.bird.height >= pipe.y + this.constant) || this.birdY + this.bird.height >= this.canvas.height - this.fg.height) {
-        window.location.href = window.location.search;
+      if (this.birdX + this.bird.width >= pipe.x
+        && this.birdX <= pipe.x + this.pipeNorth.width
+        && (this.birdY <= pipe.y + this.pipeNorth.height || this.birdY + this.bird.height >= pipe.y + this.constant)
+        || this.birdY + this.bird.height >= this.canvas.height - this.fg.height) {
+        this.state = 'gameover';
+        this.cdr.detectChanges();
+        setTimeout(() => {
+          window.location.href = window.location.search;
+        }, 4000)
+        return false;
       }
 
       if (pipe.x == 5) {
         this.score++;
       }
+      return true;
     });
 
     this.context.drawImage(this.fg, 0, this.canvas.height - this.fg.height);
+    this.context.drawImage(this.fg, 288, this.canvas.height - this.fg.height);
+    this.context.drawImage(this.fg, 576, this.canvas.height - this.fg.height);
     this.context.drawImage(this.bird, this.birdX, this.birdY);
     this.birdY += this.gravity;
 
@@ -96,8 +111,8 @@ export class AppComponent implements AfterViewInit {
         this.bird.src = bird ? `/assets/img/${bird}.png` : '/assets/img/bird.png';
         this.bg.src = '/assets/img/bg.png';
         this.fg.src = '/assets/img/fg.png';
-        this.p1.src = '/assets/img/pipeNorth.png';
-        this.p2.src = '/assets/img/pipeSouth.png';
+        this.pipeNorth.src = '/assets/img/pipeNorth.png';
+        this.pipeSouth.src = '/assets/img/pipeSouth.png';
 
         this.draw();
       }
