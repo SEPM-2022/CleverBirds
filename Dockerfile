@@ -15,7 +15,6 @@ ENV FLASK_APP app.py
 WORKDIR /project
 COPY --from=base /install /usr/local
 ADD . /project
-
 EXPOSE 5000
 
 ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
