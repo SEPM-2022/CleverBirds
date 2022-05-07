@@ -22,8 +22,10 @@ export class AppComponent implements AfterViewInit {
   fg = new Image();
   pipeNorth = new Image();
   pipeSouth = new Image();
-  canvas: any;
-  context: any;
+  // @ts-ignore
+  canvas: HTMLCanvasElement;
+  // @ts-ignore
+  context: CanvasRenderingContext2D;
   constant: any;
   gap = 120;
   gravity = 0.5;
@@ -48,7 +50,6 @@ export class AppComponent implements AfterViewInit {
 
   draw(): void {
     this.context.drawImage(this.bg, 0, 0);
-
     this.pipe.every(pipe => {
       this.constant = this.pipeNorth.height + this.gap;
       this.context.drawImage(this.pipeNorth, pipe.x, pipe.y);
@@ -98,14 +99,14 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const params = new URLSearchParams(window.location.search)
-        const bird = params.get('bird');
-        this.canvas = document.getElementById('canvas');
-        this.context = this.canvas.getContext('2d');
+        const params = new URLSearchParams(event.url.split('/')[1])
+        const bird = params.get('bird') || 'birdy';
+        this.canvas = document.getElementById('canvas') as HTMLCanvasElement;
+        this.context = this.canvas.getContext('2d') as CanvasRenderingContext2D;
 
         this.pipe[0] = { x: this.canvas.width, y: 0 };
 
-        this.bird.src = bird ? `/assets/img/${bird}.png` : '/assets/img/bird.png';
+        this.bird.src = `/assets/img/${bird}.png`;
         this.bg.src = '/assets/img/bg2_small.png';
         this.fg.src = '/assets/img/fg_edited.png';
         this.pipeNorth.src = '/assets/img/pipeNorth_edited.png';
