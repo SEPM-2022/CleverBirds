@@ -119,19 +119,16 @@ Here is a summary showing how to use our platform step-by-step:
 
 Click the links below to see the activity diagram:
 
-* [Clever Birds - Activity Diagram](link) 
+* [Clever Birds - Activity Diagram](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/March-16ActivityDiagram-CleverBirds-Website.jpg) 
 
 
 ## 4. Clever Birds Game 
 
-  
 ![print](/readme_img/swagger_print.PNG)  
  
-
 ## 4.1. Game Play
 
 xxxxx
-
 
 ## 4.2. Game Activity Diagram
 
@@ -215,11 +212,7 @@ $ docker run -d -p 5000:5000 clever-bird
  Check our web application with the following link:  
  <br>
 
-## 12. OWASP Proactive Controls
-
-The [OWASP Top Ten Proactive Controls](https://owasp.org/www-project-proactive-controls/) is a list of security techniques that should be included in every software development project. They are ordered by order of importance, with control number 1 being the most important. 
-
- <h3>C1: Define Security Requirements</h3>
+## 12. Security Controls
 
 The [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) contains categories such as authentication, access control, error handling / logging, and web services. Each category contains a collection of requirements that represent the best practices for that category drafted as verifiable statements.  
 
@@ -244,35 +237,12 @@ Secure frameworks and libraries can help to prevent a wide range of web applicat
 > * Secure configuration: we run the database in a docker container, which has connectivity restrictions (can only be accessed by the administrator and only has one door open - 1433). The server which runs the database does not allow external access. All access to the database should be properly authenticated. Thus, it is not possible to directly access the database from outside the instance. 
 > * Secure communication: we use Pyodbc, an open source Python module to communicate with the database. We apply secure (authenticated, encrypted) communications methods.  
 
-<h3>C4: Encode and Escape Data</h3>
-
-Encoding and escaping are defensive techniques meant to stop injection attacks. Here is the OWASP definition:
- * Encoding (commonly called “Output Encoding”) involves translating special characters into some different but equivalent form that is no longer dangerous in the target interpreter, for example translating the < character into the &lt; string when writing to an HTML page. 
- * Escaping involves adding a special character before the character/string to avoid it being misinterpreted, for example, adding a \ character before a " (double quote) character so that it is interpreted as text and not as closing a string.
- 
-> :white_check_mark: We don't apply encoding or escaping because it was not needed. 
-> 
-> :o: It should be highlightened that a hash is not ‘encryption’ – it cannot be decrypted back to the original text (it is a ‘one-way’ cryptographic function, Whereas
-> encryption is a two-way function, hashing is a one-way function. Hashing is used in conjunction with authentication to produce strong evidence that a given message has not
-> been modified and serves the purpose of ensuring integrity, i.e. making it so that if something is changed you can know that it’s changed password is stored in hashed into
-> the database and the authentication process uses hashing comparison. For password hashing we use the library [Werkzeug](https://pypi.org/project/Werkzeug/). 
-
-<h3>C5: Validate All Inputs</h3>
-
-Input validation is a programming technique that ensures only properly formatted data may enter a software system component. It validates that an input value is what you think it should be. Syntax validity means that the data is in the form that is expected. 
-
-> :white_check_mark: To validate inputs we use the Python library [Validator Collection](https://pypi.org/project/validator-collection/), which is a Python library that provides functions that can be used to validate the type and contents of an input value.  
- 
- 
-
  <h3>C7: User Experience Monitoring</h3>
  
  > :white_check_mark: In Clever Birds, we monitor the user experience through our chatbot Tweety, who asks questions to users about their experience. 
 
- 
 <h3>C8: Protect Data Everywhere</h3>
  
-
 > :white_check_mark: In Clever Birds, we protect data with parametrised queries to protect against SQL injection. OWASP recommends stored procedures but this is not done here because the queries are small, so this measure is unecessary. OWASP also recommends escaping, which we didn't need to do in our project because it wasn't necessary.
  
 <h3>C9: Implement Security </h3>
@@ -282,17 +252,15 @@ Here is how we will implement secure user authentication system using the Python
 > :white_check_mark:We won’t store passwords in plaintext in the database, but instead encrypt passwords using hashes.
 > :white_check_mark:Passwords stored as hash are irreversible to plaintext (one way hash).
 > :white_check_mark:With a given hash, attackers cannot guess the plaintext.  
- 
- 
 
 ## 13. Testing
-
  
 <h3>Here is our testing plan:</h3>  
  
+## 13. Confluence documentation 
  
 
-## 14. Project Roadmap 
+## 15. Project Roadmap 
 
 To take this project further: 
 
@@ -300,7 +268,7 @@ To take this project further:
 * AWS: Host the project in AWS, which offers reliable, scalable, and inexpensive cloud computing services.
 
  
- ## 15. Useful Links  
+ ## 16. Useful Links  
  
  
  [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
