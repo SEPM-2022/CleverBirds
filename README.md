@@ -1,6 +1,6 @@
  <h1>Clever Birds: Embracing Your Children’s Passion for Video Games </h1>
  
-Clever Birds is a game based on the Flappy Bird game. The difference is that in Clever Birds the user is able to choose three avatars: Daisy, Alfredo and Birdy and be provided informative information by means of a chatbot. The gameplay requires the player to navigate the little bird through gaps between the pipes without hitting them, continuously earning a point as he/she passes through each pipe.
+This presentation is focused on the project management process of building our platform, a Javascript integration of game via API. “Clever Birds”, a game in which the player navigates the avatar bird through obstacles without hitting them, earning points as he or she passes each pipe. The application has a chatbot named “Tweety”, who guides parents about how to use their children's game time as an educational experience. 
 
 :arrow_forward: Duration : 3 months
 <br>
