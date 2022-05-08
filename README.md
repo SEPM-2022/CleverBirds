@@ -237,7 +237,8 @@ Here is how we will implement secure user authentication system using the Python
  
  
 ## 14. Confluence documentation 
- 
+
+Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the Confluence Documentation file: XXXXXXXXXXxx
 
 ## 15. Project Roadmap 
 
