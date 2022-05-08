@@ -18,22 +18,22 @@ Clever Birds is a game based on the Flappy Bird game. The difference is that in 
 - [2. Requirements](#2-requirements) 
     - [2.1. Functional Requirements](#21-functional-requirements)
     - [2.2. Non-functional Requirements](#22-non-functional-requirements)
-- [3. Clever Birds Webpage](#3-clever-birds-webpage)
-    - [3.1. How to use our platform](#31-how-to-use-our-platform)
-    - [3.2. Activity Diagram](#32-activity-diagram)
-- [4. Clever Birds Game](#3-clever-birds-game)
-    - [4.1. Game Play](#31-game-play)
-    - [4.2. Game Activity Diagram](#32-game-activity-diagram) 
-- [5. Project Architecture](#3-project-architecture)
-- [6. Project Structure](#5-project-structure)
-- [7. Project Files](#6-project-files)
-- [8. Python Dependencies](#7-python-dependencies) 
-- [9. Tools](#8-tools) 
-- [10. Installation](#9-installation)
-- [11. Demo](#10-demo)
-- [12. Testing](#13-automated-testing)
-- [13. Project Roadmap](#14-project-roadmap)
-- [14. Useful Links](#15-useful-links)
+- [3. How to use our platform](#3-how-to-use-our-platform)
+- [4. Clever Birds Game](#4-clever-birds-game)
+    - [4.1. Game Play](#41-game-play)
+    - [4.2. Game Activity Diagram](#42-game-activity-diagram) 
+- [5. Project Architecture](#5-project-architecture)
+   - [5.1. Activity Diagram](#51-activity-diagram)
+- [6. Project Structure](#6-project-structure)
+- [7. Project Files](#7-project-files)
+- [8. Python Dependencies](#8-python-dependencies) 
+- [9. Tools](#9-tools) 
+- [10. Installation](#10-installation)
+- [11. Demo](#11-demo)
+- [12. Testing](#12-automated-testing)
+- [13. Project Roadmap](#13-project-roadmap)
+- [14. Confluence Documentation)(#14-confluence-documentation)
+- [15. Useful Links](#15-useful-links)
 
 
  
@@ -93,14 +93,6 @@ Here is a summary showing how to use our platform step-by-step:
 >  * STEP 5 - TWEETY: Registered and Unregistered users are able to talk to our chatbot "Tweety".  
 >  * STEP 5 - GAME: Registered users are able to play Clever Birds.  
 
-
-## 3.1. Activity Diagram
-
-Click the links below to see the activity diagram:
-
-* [Clever Birds - Activity Diagram](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/March-16ActivityDiagram-CleverBirds-Website.jpg) 
-
-
 ## 4. Clever Birds Game 
 
 ![print](/readme_img/swagger_print.PNG)  
@@ -130,7 +122,14 @@ into three main logical components: model (data), view (user interface), and con
 > * :arrow_forward: 6 - talk to tweety (will allow users to speak to our chatbot "Tweety")
 > * :arrow_forward: 7 - about (will inform how to use the platform) 
 > * :arrow_forward: 8 - privacy policy (will inform users of the personal data we collect when they access/use the Website and how we protect their personal data)
- 
+
+
+## 5.1. Activity Diagram
+
+Click the links below to see the activity diagram:
+
+* [Clever Birds - Activity Diagram](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/March-16ActivityDiagram-CleverBirds-Website.jpg) 
+
 
 ## 6. Project Structure
 
@@ -236,7 +235,7 @@ Here is how we will implement secure user authentication system using the Python
  
 <h3>Here is our testing plan:</h3>  
  
-## 13. Confluence documentation 
+## 14. Confluence documentation 
  
 
 ## 15. Project Roadmap 
