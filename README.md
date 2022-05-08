@@ -81,31 +81,8 @@ From the agreed ten requirements received, we have chosen five as high priority 
 * a5) One of the key features of what sets Clever Birds aside from Flappy Birds, is the ability for a user to choose an avatar. 
 * a6) In order to comply with the GDPR, we allow users to delete their account at any time and their data will be deleted from our database.
 * a7) Another key feature setting the application apart from Flappy Birds is a safety feature informing parents about health problems related to video games. 
- 
-## 3. Clever Birds Webpage 
 
-This project uses the Model-View-Controller (MVC) architecture framework, which can be described as an architectural pattern that separates an application
-into three main logical components: model (data), view (user interface), and controller (processes that handle input). Here is our architeture:
-
-* Model => The type of data we are using in the application: user's data 
-* View => Our interfaces (Html/CSS/Javascript)  
-* Controller => In the file with x controllers:  
-
-> :radio_button: We have eight routes, with the following features: 
-
-* 1 - user registration (users can registrate by providing name, username, email and password) 
-* 2 - user login (users can registrate by providing username and password) 
-* 3 - game (users can play Clever Birds) 
-* 4 - change avatar (will allow users to change the avatar)
-* 5 - manage account (will allow users to see in their profile their information and allow them to delete their account and data from our database)
-* 6 - talk to tweety (will allow users to speak to our chatbot "Tweety")
-* 7 - about (will inform how to use the platform) 
-* 8 - privacy policy (will inform users of the personal data we collect when they access/use the Website and how we protect their personal data)
-
-![print](/readme_img/swagger_print.PNG)  
- 
-
-## 3.1. How to use our platform
+## 3. How to use our platform
 
 Here is a summary showing how to use our platform step-by-step:
  
@@ -117,7 +94,7 @@ Here is a summary showing how to use our platform step-by-step:
 >  * STEP 5 - GAME: Registered users are able to play Clever Birds.  
 
 
-## 3.2. Activity Diagram
+## 3.1. Activity Diagram
 
 Click the links below to see the activity diagram:
 
