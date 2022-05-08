@@ -32,7 +32,7 @@ Clever Birds is a game based on the Flappy Bird game. The difference is that in 
 - [11. Demo](#11-demo)
 - [12. Testing](#12-automated-testing)
 - [13. Project Roadmap](#13-project-roadmap)
-- [14. Confluence Documentation)(#14-confluence-documentation)
+- [14. Confluence Documentation](#13-confluence-documentation)
 - [15. Useful Links](#15-useful-links)
 
 
