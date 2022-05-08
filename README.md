@@ -55,19 +55,13 @@ This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus wit
  
 ## 2.1. Functional Requirements
 
-* a1) Adam is a four-year-old boy. He wants the game to be fun: In the Clever Birds is based on the classical Flappy Bird game, which has proven to be very easy and fun. Clever Birds also allows the player to choose other avatars, which will make the game more engaging and personal. 
-
-* a2) A player should be able to create a user profile: as shown in Appendix 3, the system will allow the player to create a user profile. 
-
-* a3) Jenna is a five-year-old girl. She doesn’t want to have to ask mum for help: as shown in Appendix X, after registration, it is very simple to sign in and by pressing a button on the top right of the screen (“PLAY NOW”) the user starts playing. 
-
-* a4) Andrew works in a toy shop. He wants the game to have a unique selling point: The unique selling point of the game is the fact that it has a chatbot to talk to parents about the skills their children can gain.  
-
-* a5) A player should be able to create a persona: As it is shown in Appendix X (“Choose your avatar”), the application allows users to choose one of the following avatars: Daisy, Alfredo and Birdy. 
-
-* a6) A customer can cancel their subscription at any time: As it is shown in Appendix X, in the “User Dashboard”, users can delete their account at any time and their data will be deleted from our database. 
-
-* a7) Kashif is a 30 year old dad. He wants the game to be safe: Some of the main dangers of video games are cyber bullying, privacy problems, personal information on consoles, computers and devices, webcam worries, online predators, hidden Fees and Malware (Kapersky, 2022) This project introduces a chatbot named “Tweety”. It will be able to explain to parents how to protect their children and enhance the gaming experience by discussing health problems related to video-games and how to solve them.
+* a1) Fun: Clever Birds is fun and simple. According to Rosewater (2011), the real way to determine if a game is fun is to ask the players if they would play again. We will do this through our chatbot Tweety in a customer satisfaction survey. 
+* a2) User Profile: Users can create a user profile.
+* a3)  Suitable for kids 5-8 years old: Clever Birds is very simple. After signing in, the user can see a green button on the top right ("PLAY NOW!") on all screens. By pressing the button, the user starts playing.  
+* a4) Unique selling point: A chatbot to talk to parents about the skills their children can gain.  
+* a5) Player persona: The application allows users to choose between three avatars.
+* a6) Cancelation of subscription:  On the page "Manage Account", users can delete their account, which will erase their data from our database. 
+* a7) Safety: The chatbot "Tweety" teaches parents how to protect their children by discussing video games' health problems and how to solve them.
 
 
 ## 2.2. Non-functional Requirements
@@ -75,10 +69,18 @@ This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus wit
 > :small_orange_diamond: Design based on a microservice architecture, using MVC (Model-View-Controller) pattern.  
 
 * b1) The UI should be usable with 1 hand: In the Clever Birds game, the player pilots the bird into the pipes, by clicking with the mouse.
-
 * b2) Data must be stored in the most efficient way: Our application stores data efficiently, as explained in Appendix X: “Database Design”. 
-
 * b3) Data must be able to be searched and managed as efficiently as possible: In our application data can be managed efficiently, as explained in Appendix X: “Database Design.
+
+## 2.3. High priority requirements
+
+From the agreed ten requirements received, we have chosen five as high priority due to their importance to the overall product functionality and design:
+
+* a2) 	User profiles play a vital role in user experience as it provides a collection of information associated with users. 
+* a3) 	The game should be easy to understand and the user’s path to playing the game very simple. 
+* a5) One of the key features of what sets Clever Birds aside from Flappy Birds, is the ability for a user to choose an avatar. 
+* a6) In order to comply with the GDPR, we allow users to delete their account at any time and their data will be deleted from our database.
+* a7) Another key feature setting the application apart from Flappy Birds is a safety feature informing parents about health problems related to video games. 
  
 ## 3. Clever Birds Webpage 
 
