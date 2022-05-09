@@ -11,3 +11,6 @@ docker build -f static/js/game/dockerfiles/test.Dockerfile -t ${game} static/js/
 docker run --name ${game} -d ${game}
 docker stop ${game}
 docker rm ${game}
+
+docker build . -t python_test
+docker run -it --entrypoint "/usr/bin/env" python_test /usr/local/bin/python tests.py

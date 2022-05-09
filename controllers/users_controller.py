@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, session, make_response
-from app import app 
+from app import app, db
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from models.clever_users import *
@@ -89,4 +89,4 @@ def manageAccount():
             user_found_to_delete = CleverUsers.query.filter_by(U_Id= user_to_delete).first() #fazendo query no banco para pegar o user Id
             db.session.delete(user_found_to_delete)
             db.session.commit()
-            return index_html(True)
+            return render_template('index.html', deleted_user=True)
