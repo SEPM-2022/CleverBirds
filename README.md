@@ -50,6 +50,9 @@ This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus wit
 
 <br> 
  
+ 
+ ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
+ 
 ## 2. Requirements 
 
  
