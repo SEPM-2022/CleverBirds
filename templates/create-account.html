@@ -3,7 +3,6 @@
 
 <head>
     {% include 'head.html' %}
-    <link href="static/signin.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -120,22 +119,22 @@
                             <div class="row mt-3">
                                 <div class="col-md-12">
                                     <label class="labels">Name</label>
-                                    <input type="text" class="form-control" placeholder="Type your name" value=""
+                                    <input id="form-name" type="text" class="form-control" placeholder="Type your name" value=""
                                         name="name">
                                 </div>
                                 <div class="col-md-12">
                                     <label class="labels">Password</label>
-                                    <input type="password" class="form-control" placeholder="Type your password"
+                                    <input id="form-password" type="password" class="form-control" placeholder="Type your password"
                                         value="" name="password">
                                 </div>
                                 <div class="col-md-12">
                                     <label class="labels">User name</label>
-                                    <input type="text" class="form-control" placeholder="Type your username" value=""
+                                    <input id="form-username" type="text" class="form-control" placeholder="Type your username" value=""
                                         name="username">
                                 </div>
                                 <div class="col-md-12">
                                     <label class="labels">Email</label>
-                                    <input type="text" class="form-control" placeholder="Type your email" value=""
+                                    <input id="form-email" type="text" class="form-control" placeholder="Type your email" value=""
                                         name="email">
                                 </div>
                             </div>
@@ -154,7 +153,7 @@
 
                             </div>
                             <div class="mt-5 text-center">
-                                <button class="btn btn-primary profile-button btn-next" onclick="chooseAvatar()"
+                                <button id="next-step" class="btn btn-primary profile-button btn-next" onclick="chooseAvatar()"
                                     type="button">Next Step</button>
                             </div>
                         </div>
@@ -183,7 +182,7 @@
                                 comes running when called, but only if you have a cookie. </p>
                         </div>
                         <div class="avatar-rodape text-center">
-                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="daisy"
+                            <input id="form-daisy" type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="daisy"
                                 name="avatar" />
                         </div>
                     </div>
@@ -198,7 +197,7 @@
                                 Other then morning, he will come when called. </p>
                         </div>
                         <div class="avatar-rodape text-center">
-                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="alfredo"
+                            <input id="form-alfredo" type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="alfredo"
                                 name="avatar" />
                         </div>
                     </div>
@@ -213,7 +212,7 @@
                                 long. He is always right at your feet. Pet me! Pick me up! </p>
                         </div>
                         <div class="avatar-rodape text-center">
-                            <input type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="birdy"
+                            <input id="form-birdy" type="submit" class="btn btn-sm btn-outline-secondary btn-avatar" value="birdy"
                                 name="avatar" />
                         </div>
                     </div>
@@ -231,12 +230,14 @@
             document.getElementById('login-breadcrumb').classList.remove('breadcrumbs-ativo')
         }
 
-        document.getElementById('girl').addEventListener('change', function () {
-            document.getElementById('avatar-img').src = 'static/img/girl.jfif'
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('girl').addEventListener('change', function () {
+                document.getElementById('avatar-img').src = 'static/img/girl.jfif'
+            });
 
-        document.getElementById('boy').addEventListener('change', function () {
-            document.getElementById('avatar-img').src = 'static/img/boy.png'
+            document.getElementById('boy').addEventListener('change', function () {
+                document.getElementById('avatar-img').src = 'static/img/boy.png'
+            });
         });
     </script>
 </body>
