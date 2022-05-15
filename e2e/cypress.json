@@ -1,1 +1,5 @@
-{}
+{
+  "baseUrl": "http://host.docker.internal",
+  "pluginsFile": false,
+  "supportFile": false
+}

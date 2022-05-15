@@ -6,7 +6,7 @@ describe('Test dynamic pages', () => {
     const email = 'email' + randomNumber + '@cypress.com';
 
     it('when clicking on create an account, then should open respective page', () => {
-        cy.visit('http://localhost/')
+        cy.visit(Cypress.config().baseUrl)
 
         cy.get('#signup').click()
 
@@ -15,7 +15,7 @@ describe('Test dynamic pages', () => {
     })
 
     it('when filling out registration form, should create account', () => {
-        cy.visit('http://localhost/signup')
+        cy.visit(Cypress.config().baseUrl + '/signup')
 
 
         cy.get('#form-name')
@@ -42,7 +42,7 @@ describe('Test dynamic pages', () => {
     })
 
     it('when filling out correct login details, should be directed to dashboard', () => {
-        cy.visit('http://localhost')
+        cy.visit(Cypress.config().baseUrl)
 
         cy.get('#Username')
             .type(username)
@@ -59,7 +59,7 @@ describe('Test dynamic pages', () => {
     })
 
     it('when filling out false login details, should stay on same page', () => {
-        cy.visit('http://localhost')
+        cy.visit(Cypress.config().baseUrl)
 
         const notExistUsername = 'notExistUsername'
         const notExistPassword = 'notExistPassword'
