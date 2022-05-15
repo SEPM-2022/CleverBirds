@@ -39,7 +39,7 @@
             <img src="../static/img/tweety-wait.gif" class="img-fluid profile-image-pic img-thumbnail my-3"
               width="180px" alt="profile">
           </div>
-          <form class="px-lg-3 py-lg-5 mt-5" action="\login" method="post">
+          <form id="form-login" class="px-lg-3 py-lg-5 mt-5" action="\login" method="post">
             <div class="mb-3">
               <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name"
                 name="username">
@@ -47,7 +47,7 @@
             <div class="mb-3">
               <input type="password" class="form-control" id="password" placeholder="password" name="password">
             </div>
-            <input type="submit" class="btn btn-success fw-bold px-5 mb-5 w-100" value="Login">
+            <input id="form-login-submit" type="submit" class="btn btn-success fw-bold px-5 mb-5 w-100" value="Login">
             {% with messages = get_flashed_messages() %}
               {% if messages %}
                 {% for message in messages %}
@@ -58,7 +58,7 @@
             {% if deleted_user %}
               <p class="text-center text-danger">Your account has been successfully deleted. We are sorry to see you go.</p>
             {% endif %}
-            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not Registered?&nbsp;<a href="/signup"
+            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not Registered?&nbsp;<a id="signup" href="/signup"
                 class="text-dark fw-bold">Create an Account</a>
             </div>
           </form>
@@ -75,14 +75,6 @@
       document.getElementById('choose-avatar-breadcrumb').classList.add('breadcrumbs-ativo')
       document.getElementById('login-breadcrumb').classList.remove('breadcrumbs-ativo')
     }
-
-    document.getElementById('girl').addEventListener('change', function () {
-      document.getElementById('avatar-img').src = 'static/img/girl.jfif'
-    });
-
-    document.getElementById('boy').addEventListener('change', function () {
-      document.getElementById('avatar-img').src = 'static/img/boy.png'
-    });
   </script>
 </body>
 
