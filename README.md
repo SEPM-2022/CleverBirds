@@ -23,8 +23,8 @@ This presentation is focused on the project management process of building our p
 - [4. Clever Birds Game](#4-clever-birds-game)
 - [5. Project Architecture](#5-project-architecture)
    - [5.1. Activity Diagram](#51-activity-diagram)
-- [6. Project Structure](#6-project-structure)
-- [7. Project Files](#7-project-files)
+   - [5.2. Project Structure](#51-project-structure)
+   - [5.3. Project Files](#51-project-files)
 - [8. Python Dependencies](#8-python-dependencies) 
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
@@ -121,12 +121,12 @@ Click the links below to see the activity diagram:
 * [Clever Birds - Activity Diagram](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/March-16ActivityDiagram-CleverBirds-Website.jpg) 
 
 
-## 6. Project Structure
+## 5.2 Project Structure
 
 The following directory diagram was generated with the following command in the terminal: "tree /F"
  
 
-## 7. Project Files
+## 5.3 Project Files
 
 * `README.md` [README.md](https://github.com/SEPM-2022/CleverBirds/blob/develop/README.md)- Contains the description and documentation of the project. 
 * `app.py` [app.py](https://github.com/SEPM-2022/CleverBirds/blob/develop/app.py) - Creates the database and defines all the routes.   
