@@ -20,8 +20,6 @@ This presentation is focused on the project management process of building our p
     - [2.2. Non-functional Requirements](#22-non-functional-requirements)
 - [3. How to use our platform](#3-how-to-use-our-platform)
 - [4. Clever Birds Game](#4-clever-birds-game)
-    - [4.1. Game Play](#41-game-play)
-    - [4.2. Game Activity Diagram](#42-game-activity-diagram) 
 - [5. Project Architecture](#5-project-architecture)
    - [5.1. Activity Diagram](#51-activity-diagram)
 - [6. Project Structure](#6-project-structure)
@@ -48,11 +46,7 @@ This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus wit
 <br>
 :arrow_forward:In the microservice architecture, SFA-API is connected with APOD. Thus, our microservive returns a picture that comes directly from APOD. 
 
-<br> 
- 
- 
- ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
- 
+<br>  
 ## 2. Requirements 
 
  
@@ -98,13 +92,7 @@ Here is a summary showing how to use our platform step-by-step:
 
 ## 4. Clever Birds Game 
 
-![print](/readme_img/swagger_print.PNG)  
- 
-## 4.1. Game Play
-
-xxxxx
-
-## 4.2. Game Activity Diagram
+ ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
 
 
 ## 5. Project Architecture 
