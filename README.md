@@ -24,7 +24,6 @@ This presentation is focused on the project management process of building our p
 - [5. Project Architecture](#5-project-architecture)
    - [5.1. Activity Diagram](#51-activity-diagram)
    - [5.2. Project Structure](#51-project-structure)
-   - [5.3. Project Files](#51-project-files)
 - [8. Python Dependencies](#8-python-dependencies) 
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
@@ -127,6 +126,7 @@ The following directory diagram was generated with the following command in the 
  
 
 ```
+C:.
 │   .gitignore
 │   app.py
 │   app.sqlite
@@ -232,7 +232,6 @@ The following directory diagram was generated with the following command in the 
 │               │       └───game-over
 │               │               game-over.component.html
 │               │               game-over.component.ts
-│               │
 │               ├───assets
 │               │   │   .gitkeep
 │               │   │
@@ -253,7 +252,6 @@ The following directory diagram was generated with the following command in the 
 │               └───environments
 │                       environment.prod.ts
 │                       environment.ts
-│
 ├───templates
 │       about.html
 │       au.html
@@ -270,18 +268,9 @@ The following directory diagram was generated with the following command in the 
 │       signup-success.html
 │       tweety.html
 │       user-dashboard.html
-│
 └───__pycache__
         app.cpython-38.pyc
 ```
-
-## 5.3 Project Files
-
-* `README.md` [README.md](https://github.com/SEPM-2022/CleverBirds/blob/develop/README.md)- Contains the description and documentation of the project. 
-* `app.py` [app.py](https://github.com/SEPM-2022/CleverBirds/blob/develop/app.py) - Creates the database and defines all the routes.   
-* `Dockerfile`[Dockerfile](https://github.com/SEPM-2022/CleverBirds/blob/develop/Dockerfile) - Docker config file to build a Docker image.
-* `application_structure.py` [application_structure.py](https://github.com/alicevillar/sfa_api/blob/main/application_structure.py) - Directory tree structure in Python.
-* `requirements.txt` [requirements.txt](https://github.com/SEPM-2022/CleverBirds/blob/develop/requirements.txt) - The list of Python (PyPi) requirements. Script: 1) pip install pipreqs; 2) pipreqs --encoding=utf8 C:\Users\Alice\PycharmProjects\SFA_DB 
 
 
 ## 8. Python Dependencies
