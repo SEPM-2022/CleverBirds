@@ -18,6 +18,7 @@ This presentation is focused on the project management process of building our p
 - [2. Requirements](#2-requirements) 
     - [2.1. Functional Requirements](#21-functional-requirements)
     - [2.2. Non-functional Requirements](#22-non-functional-requirements)
+    - [2.3. High priority requirements](#23-high-priority-requirements)
 - [3. How to use our platform](#3-how-to-use-our-platform)
 - [4. Clever Birds Game](#4-clever-birds-game)
 - [5. Project Architecture](#5-project-architecture)
