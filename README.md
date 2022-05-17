@@ -126,6 +126,155 @@ Click the links below to see the activity diagram:
 The following directory diagram was generated with the following command in the terminal: "tree /F"
  
 
+```
+│   .gitignore
+│   app.py
+│   app.sqlite
+│   Dockerfile
+│   privacy-policy-page.html
+│   README.md
+│   requirements.txt
+│   start.sh
+│   test-e2e.sh
+│   test.sh
+│   tests.py
+│
+├───assets
+│       CleverBirdsDB.sql
+│       March-14-ActivityDiagram-CleverBirds-Website.drawio.pdf
+│       March-16ActivityDiagram-CleverBirds-Website.jpg
+│       simpledb-april.JPG
+│
+├───controllers
+│   │   chatbot.py
+│   │   game_controller.py
+│   │   users_controller.py
+│   │   user_documentation.py
+│   │
+│   └───__pycache__
+│           chatbot.cpython-38.pyc
+│           game_controller.cpython-38.pyc
+│           users_controller.cpython-38.pyc
+│           user_documentation.cpython-38.pyc
+│
+├───e2e
+│   │   cypress.json
+│   │   package-lock.json
+│   │   package.json
+│   │
+│   └───cypress
+│       └───integration
+│               dynamic-pages.spec.js
+│               static-pages.spec.js
+│
+├───models
+│   │   clever_users.py
+│   │   game_instance.py
+│   │   music.py
+│   │   
+│   └───__pycache__
+│           clever_users.cpython-38.pyc
+│           game_instance.cpython-38.pyc
+│           music.cpython-38.pyc
+│
+├───static
+│   │   dashboard.css
+│   │   index.css
+│   │
+│   ├───img
+│   │
+│   └───js
+│       └───game
+│           │   .browserslistrc
+│           │   .eslintrc.json
+│           │   .gitignore
+│           │   angular.json
+│           │   jest-global-mocks.ts
+│           │   jest.config.js
+│           │   package-lock.json
+│           │   package.json
+│           │   README.md
+│           │   setup-jest.ts
+│           │   tsconfig.app.json
+│           │   tsconfig.json
+│           │   tsconfig.spec.json
+│           │   tslint.json
+│           │
+│           ├───dockerfiles
+│           │       build.Dockerfile
+│           │       test.Dockerfile
+│           │
+│           ├───e2e
+│           │   │   protractor.conf.js
+│           │   │   tsconfig.json
+│           │   │
+│           │   └───src
+│           │           app.e2e-spec.ts
+│           │           app.po.ts
+│           │
+│           └───src
+│               │   favicon.ico
+│               │   index.html
+│               │   main.ts
+│               │   polyfills.ts
+│               │   styles.scss
+│               │
+│               ├───app
+│               │   │   app-routing.module.ts
+│               │   │   app.component.html
+│               │   │   app.component.scss
+│               │   │   app.component.spec.ts
+│               │   │   app.component.ts
+│               │   │   app.module.ts
+│               │   │   window.token.ts
+│               │   │
+│               │   └───components
+│               │       └───game-over
+│               │               game-over.component.html
+│               │               game-over.component.ts
+│               │
+│               ├───assets
+│               │   │   .gitkeep
+│               │   │
+│               │   └───img
+│               │           alfredo.png
+│               │           bg.png
+│               │           bg2.png
+│               │           bg2_small.png
+│               │           birdy.png
+│               │           daisy.png
+│               │           fg.png
+│               │           fg_edited.png
+│               │           pipeNorth.png
+│               │           pipeNorth_edited.png
+│               │           pipeSouth.png
+│               │           pipeSouth_edited.png
+│               │
+│               └───environments
+│                       environment.prod.ts
+│                       environment.ts
+│
+├───templates
+│       about.html
+│       au.html
+│       change-avatar.html
+│       choose-avatar.html
+│       create-account.html
+│       footer.html
+│       head.html
+│       header.html
+│       index.html
+│       manage-account.html
+│       playgame.html
+│       privacy-policy.html
+│       signup-success.html
+│       tweety.html
+│       user-dashboard.html
+│
+└───__pycache__
+        app.cpython-38.pyc
+```
+
 ## 5.3 Project Files
 
 * `README.md` [README.md](https://github.com/SEPM-2022/CleverBirds/blob/develop/README.md)- Contains the description and documentation of the project. 
