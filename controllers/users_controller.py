@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, session, make_response
+from flask import Flask, render_template, request, session, make_response, flash
 from app import app, db
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -61,6 +61,8 @@ def page_login():
                 return render_template('user-dashboard.html', Name = user_found.U_Name, Username = user_found.U_Username, Avatar=user_found.U_CharacterName, Score=user_found.U_Score )
             else:
                 flash("Wrong username/password.")
+                return render_template('index.html', user_not_found=True)  # using JInja in index.html
+
     if request.method=="GET":
         return render_template('index.html',user_not_found=False)  
 
