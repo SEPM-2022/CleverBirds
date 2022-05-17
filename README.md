@@ -28,10 +28,8 @@ This presentation is focused on the project management process of building our p
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
 - [11. Demo](#11-demo)
-- [12. Testing](#12-automated-testing)
-- [13. Project Roadmap](#13-project-roadmap)
-- [14. Confluence Documentation](#13-confluence-documentation)
-- [15. Useful Links](#15-useful-links)
+- [12. Confluence Documentation](#13-confluence-documentation)
+- [13. Useful Links](#15-useful-links)
 
 
  
@@ -138,11 +136,10 @@ The following directory diagram was generated with the following command in the 
 
 ## 8. Python Dependencies
 
-  [*flask*](http://flask.pocoo.org/))  
+* [*flask*](http://flask.pocoo.org/))  
 * [**Werkzeug**](https://pypi.org/project/Werkzeug/) - for password hashing RESTful API documentation.
 * [**Pyodbc**](https://pypi.org/project/pyodbc/) - for accessing the database and carry out user registration.
 * [**Requests**](https://pypi.org/project/requests/) - for making HTTP requests in Python. 
-* [**Validator Collection**](https://pypi.org/project/validator-collection/) - to validade users' inputs. 
 * [**Dependency Check**](https://pypi.org/project/dependency-check/) - scans application dependencies and checks whether they contain any published vulnerabilities.
 
  
@@ -175,71 +172,18 @@ $ docker run -d -p 5000:5000 clever-bird
 ``` 
  
   
-## 11. Quick Start  
+## 11. DEMO
  
  <br>
  Check our web application with the following link:  
  <br>
-
-## 12. Security Controls
-
-The [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) contains categories such as authentication, access control, error handling / logging, and web services. Each category contains a collection of requirements that represent the best practices for that category drafted as verifiable statements.  
-
->  :white_check_mark: Security requirements: 
->  * Protect against injection: We use parameterised queries to avoid SQL injection attacks in all the operations with the database. 
->  * Protect  Data: protected password with hashing.  
->  * Broken Access Control: Restrictions on what users are allowed to do. 
->  * Protect against Cross-Site Scripting (XSS): We protect against XSS in our web page, using javascript. 
-   
- <h3>C2: Leverage Security Frameworks and Libraries</h3>
-
-Secure frameworks and libraries can help to prevent a wide range of web application vulnerabilities.  
-
->  :white_check_mark: In Clever Birds we do a [dependency check](https://securityguide.github.io/webapps/tools/python-tools/python-dependency-checker.html) to detect publicly disclosed vulnerabilities contained within a project's dependencies. Click [here](https://github.com/alicevillar/sfa_api/blob/main/readme_img/dependency_check.JPG) to see the result.  
-
- <h3>C3: Secure Database Access</h3>
-
- According to OWASP, secure access to databases consider: secure queries, secure configuration, secure communication and secure authentication. 
-
->  :white_check_mark: Clever Birds handles secure database access with the following measures: 
-> * Secure queries: In order to mitigate SQL injection we used ‘Query Parameterization’. However, certain locations in a database query are not parameterisable. Because of the large variation in the pattern of SQL injection attacks they are often unable to protect databases. OWASP recommends testing queries for performance, but this is not done here because the queries are all very small and therefore it is not necessary. 
-> * Secure configuration: we run the database in a docker container, which has connectivity restrictions (can only be accessed by the administrator and only has one door open - 1433). The server which runs the database does not allow external access. All access to the database should be properly authenticated. Thus, it is not possible to directly access the database from outside the instance. 
-> * Secure communication: we use Pyodbc, an open source Python module to communicate with the database. We apply secure (authenticated, encrypted) communications methods.  
-
- <h3>C7: User Experience Monitoring</h3>
  
- > :white_check_mark: In Clever Birds, we monitor the user experience through our chatbot Tweety, who asks questions to users about their experience. 
-
-<h3>C8: Protect Data Everywhere</h3>
- 
-> :white_check_mark: In Clever Birds, we protect data with parametrised queries to protect against SQL injection. OWASP recommends stored procedures but this is not done here because the queries are small, so this measure is unecessary. OWASP also recommends escaping, which we didn't need to do in our project because it wasn't necessary.
- 
-<h3>C9: Implement Security </h3>
-  
-Here is how we will implement secure user authentication system using the Python library [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/):
-
-> :white_check_mark:We won’t store passwords in plaintext in the database, but instead encrypt passwords using hashes.
-> :white_check_mark:Passwords stored as hash are irreversible to plaintext (one way hash).
-> :white_check_mark:With a given hash, attackers cannot guess the plaintext.  
-
-## 13. Testing
- 
-<h3>Here is our testing plan:</h3>  
- 
- 
-## 14. Confluence documentation 
+## 12. Confluence documentation 
 
 Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the Confluence Documentation file: XXXXXXXXXXxx
 
-## 15. Project Roadmap 
-
-To take this project further: 
-
-* WEB INTERFACE: Improve....
-* AWS: Host the project in AWS, which offers reliable, scalable, and inexpensive cloud computing services.
-
  
- ## 16. Useful Links  
+ ## 13. Useful Links  
  
  
  [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
