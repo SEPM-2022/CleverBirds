@@ -296,7 +296,11 @@ Throughout the development of this project, we used Confluence to develop our pr
 
 [GIT FLOW Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-[CLIP ARTMA](https://www.clipartmax.com)
+[CLIPART MAX](https://www.clipartmax.com)
 
+[CLIPART LIBRARY]([https://www.clipartmax.com](http://clipart-library.com/)
+
+
+ 
 
   
