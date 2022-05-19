@@ -309,7 +309,7 @@ $ docker run -d -p 5000:5000 clever-bird
  
 ## 11. Confluence documentation 
 
-Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the Confluence Documentation file: XXXXXXXXXXxx
+Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the: [Confluence Documentation - PDF](https://drive.google.com/file/d/1bcfJRxCxT_YQqohx5oJ7WdmVtwPqjC3e/view?usp=sharing)
 
  
  ## 12. Useful Links  
