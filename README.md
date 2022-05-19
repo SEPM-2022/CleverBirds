@@ -240,10 +240,9 @@ C:.
         app.cpython-38.pyc
 ```
 
-
 ## 8. Python Dependencies
 
-* [*flask*](http://flask.pocoo.org/))  
+* [**flask**](http://flask.pocoo.org/))  
 * [**Werkzeug**](https://pypi.org/project/Werkzeug/) - for password hashing RESTful API documentation.
 * [**Pyodbc**](https://pypi.org/project/pyodbc/) - for accessing the database and carry out user registration.
 * [**Requests**](https://pypi.org/project/requests/) - for making HTTP requests in Python. 
@@ -258,8 +257,10 @@ C:.
 * [**Insomnia**](https://insomnia.rest/) - used to consume APOD and retrieve the 365 images for our dataset (monolithic architecture). 
 * [**JIRA**](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=89541890822&campaign=9124878120&creative=542569520122&device=c&keyword=jira%20project%20management%20software&matchtype=e&network=g&placement=&ds_kids=p51241495749&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAjw9LSSBhBsEiwAKtf0n46U4jUddN6hDaMFm69grPXSOFett05-wHANMVWGpSxsxZ8G_RdhwxoC6moQAvD_BwE&gclsrc=aw.ds) - used for project management. 
 * [**CONFLUENCE**](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=96330466462&campaign=9612124506&creative=425915242014&device=c&keyword=%2Bconfluence&matchtype=b&network=g&placement=&ds_kids=p52353042127&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQI6_HrbY2AqRc9qHw7d-FEv1V8S5twWSk_v-Y53l-PRSiQIt9BVRvkaAljLEALw_wcB&gclsrc=aw.ds) - for documentation.
+* [**Dbeaver**]([https://www.docker.com/](https://dbeaver.pro/?url=https://dbeaver.io/
+) - we used as an interface for our database (SQLite). Allowed us to document our tests in our database. 
 
-
+ 
 ## 10. Installation
 
 ### Using python
@@ -279,14 +280,11 @@ $ docker build -t clever-bird .
 $ docker run -d -p 5000:5000 clever-bird
 ``` 
  
- 
 ## 11. Confluence documentation 
 
 Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://drive.google.com/file/d/1bcfJRxCxT_YQqohx5oJ7WdmVtwPqjC3e/view?usp=sharing)
-
  
  ## 12. Useful Links  
- 
  
 [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
  
