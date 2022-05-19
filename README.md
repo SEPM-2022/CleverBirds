@@ -297,7 +297,7 @@ Throughout the development of this project, we used Confluence to develop our pr
 
 [CLIPART MAX](https://www.clipartmax.com)
 
-[CLIPART LIBRARY]([https://www.clipartmax.com](http://clipart-library.com/)
+[CLIPART LIBRARY](http://clipart-library.com/)
 
 
  
