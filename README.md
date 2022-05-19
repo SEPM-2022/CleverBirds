@@ -309,20 +309,18 @@ $ docker run -d -p 5000:5000 clever-bird
  
 ## 11. Confluence documentation 
 
-Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the: [Confluence Documentation - PDF](https://drive.google.com/file/d/1bcfJRxCxT_YQqohx5oJ7WdmVtwPqjC3e/view?usp=sharing)
+Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://drive.google.com/file/d/1bcfJRxCxT_YQqohx5oJ7WdmVtwPqjC3e/view?usp=sharing)
 
  
  ## 12. Useful Links  
  
  
- [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
+[Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
  
- [SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application) 
+[SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application) 
  
- [GITHUB project guidelines](https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212)
- 
- [Flask Testing](]https://pythonhosted.org/Flask-Testing/)
- 
+[GITHUB project guidelines](https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212)
+
 [GIT FLOW](http://danielkummer.github.io/git-flow-cheatsheet/)
 
 [GIT FLOW Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
