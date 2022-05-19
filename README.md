@@ -38,11 +38,9 @@
 ## 1. Overview 
 
  Clever Birds a project developed as an integration for a game via API along with Flask webserver. The player navigates the avatar bird through obstacles without hitting them, earning points as he or she passes each pipe. The application has a chatbot named “Tweety”, who guides parents about how to use their children's game time as an educational experience. 
+  
 
-
-<br>  
 ## 2. Requirements 
-
  
 ## 2.1. Functional Requirements
 
