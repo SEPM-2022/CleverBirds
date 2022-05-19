@@ -31,7 +31,7 @@ from controllers.chatbot import *
     #return render_template('index.html',variable = "Angelina",deleted_user=is_deleted)
 
 
-#db.create_all()
+db.create_all()
 
 if __name__ == "__main__":
     # create scrip only once
