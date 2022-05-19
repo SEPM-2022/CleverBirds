@@ -55,8 +55,6 @@
 
 ## 2.2. Non-functional Requirements
 
-> :small_orange_diamond: Design based on a microservice architecture, using MVC (Model-View-Controller) pattern.  
-
 * b1) The UI should be usable with 1 hand: In the Clever Birds game, the player pilots the bird into the pipes, by clicking with the mouse.
 * b2) Data must be stored in the most efficient way: Our application stores data efficiently, as explained in Appendix X: “Database Design”. 
 * b3) Data must be able to be searched and managed as efficiently as possible: In our application data can be managed efficiently, as explained in Appendix X: “Database Design.
