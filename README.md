@@ -254,9 +254,10 @@ C:.
 
 * [**Docker**](https://www.docker.com/) - for storing the database and the API in a container. 
 * [**Ngrok**](https://ngrok.com/) - enabled the exposure of the a local development server to the Internet with minimal effort. 
-* [**Github**](https://github.com/alicevillar/sfa_api) - to document the project. 
+* [**Github**](https://github.com/alicevillar/sfa_api) - to store the code and document the project. 
 * [**Insomnia**](https://insomnia.rest/) - used to consume APOD and retrieve the 365 images for our dataset (monolithic architecture). 
 * [**JIRA**](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=89541890822&campaign=9124878120&creative=542569520122&device=c&keyword=jira%20project%20management%20software&matchtype=e&network=g&placement=&ds_kids=p51241495749&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAjw9LSSBhBsEiwAKtf0n46U4jUddN6hDaMFm69grPXSOFett05-wHANMVWGpSxsxZ8G_RdhwxoC6moQAvD_BwE&gclsrc=aw.ds) - used for project management. 
+* [**CONFLUENCE**](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=96330466462&campaign=9612124506&creative=425915242014&device=c&keyword=%2Bconfluence&matchtype=b&network=g&placement=&ds_kids=p52353042127&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQI6_HrbY2AqRc9qHw7d-FEv1V8S5twWSk_v-Y53l-PRSiQIt9BVRvkaAljLEALw_wcB&gclsrc=aw.ds) - for documentation.
 
 
 ## 10. Installation
