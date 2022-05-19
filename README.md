@@ -10,7 +10,7 @@
 
 > :round_pushpin: Goals to be achieved: 
 > * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing. 
-> * Apply the Scrum Framework for our product development.
+> * Apply Scrum project management methodology for organizing and managing our project. 
  
  <h1>Table of Contents</h1>
 
