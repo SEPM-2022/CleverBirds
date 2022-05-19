@@ -239,12 +239,11 @@ C:.
 
 ## 8. Python Dependencies
 
-* [**flask**](http://flask.pocoo.org/))  
+* [**flask**](http://flask.pocoo.org/) 
 * [**Werkzeug**](https://pypi.org/project/Werkzeug/) - for password hashing RESTful API documentation.
 * [**Pyodbc**](https://pypi.org/project/pyodbc/) - for accessing the database and carry out user registration.
 * [**Requests**](https://pypi.org/project/requests/) - for making HTTP requests in Python. 
-* [**Dependency Check**](https://pypi.org/project/dependency-check/) - scans application dependencies and checks whether they contain any published vulnerabilities.
-
+ 
  
 ## 9. Tools
 
