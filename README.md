@@ -44,8 +44,8 @@
  
 ## 2.1. Functional Requirements
 
-* a1) Fun: Clever Birds is fun and simple. According to Rosewater (2011), the real way to determine if a game is fun is to ask the players if they would play again. We will do this through our chatbot Tweety in a customer satisfaction survey. 
-* a2) User Profile: Users can create a user profile.
+* a1) Fun: Clever Birds is fun and simple. By clicking the button "play now" on the top right or every screen, the user can start playing the game. 
+* a2) User Profile: After registration, all users have their personal profile.
 * a3)  Suitable for kids 5-8 years old: Clever Birds is very simple. After signing in, the user can see a green button on the top right ("PLAY NOW!") on all screens. By pressing the button, the user starts playing.  
 * a4) Unique selling point: A chatbot to talk to parents about the skills their children can gain.  
 * a5) Player persona: The application allows users to choose between three avatars.
