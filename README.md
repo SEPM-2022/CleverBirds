@@ -27,9 +27,8 @@
 - [8. Python Dependencies](#8-python-dependencies) 
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
-- [11. Demo](#11-demo)
-- [12. Confluence Documentation](#13-confluence-documentation)
-- [13. Useful Links](#15-useful-links)
+- [11. Confluence Documentation](#13-confluence-documentation)
+- [12. Useful Links](#15-useful-links)
 
 
  
@@ -307,19 +306,13 @@ $ docker build -t clever-bird .
 $ docker run -d -p 5000:5000 clever-bird
 ``` 
  
-  
-## 11. DEMO
  
- <br>
- Check our web application with the following link:  
- <br>
- 
-## 12. Confluence documentation 
+## 11. Confluence documentation 
 
 Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the Confluence Documentation file: XXXXXXXXXXxx
 
  
- ## 13. Useful Links  
+ ## 12. Useful Links  
  
  
  [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
