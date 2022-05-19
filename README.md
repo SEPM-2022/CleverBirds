@@ -257,7 +257,7 @@ C:.
 * [**CONFLUENCE**](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=96330466462&campaign=9612124506&creative=425915242014&device=c&keyword=%2Bconfluence&matchtype=b&network=g&placement=&ds_kids=p52353042127&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQI6_HrbY2AqRc9qHw7d-FEv1V8S5twWSk_v-Y53l-PRSiQIt9BVRvkaAljLEALw_wcB&gclsrc=aw.ds) - for documentation.
 * [**Dbeaver**](https://dbeaver.pro/?url=https://dbeaver.io/
 ) - we used as an interface for our database (SQLite). Allowed us to document our tests in our database. 
-* [**SourceTree**]([https://www.docker.com/](https://www.sourcetreeapp.com/)) - to better vizualize our work as a team using gitflow.  
+* [**SourceTree**](https://www.sourcetreeapp.com/)) - to better vizualize our work as a team using gitflow.  
 
  
 ## 10. Installation
