@@ -10,7 +10,7 @@
 > * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing. 
 > * Apply Scrum project management methodology for organizing and managing our project. 
  
-<h3>:clapper:[Video Presentation](https://drive.google.com/file/d/1ey6QWLDuiZW_9KxYp4D29YSA3fxOb3vb/view?usp=sharing) </h3>
+:clapper:[Video Presentation](https://drive.google.com/file/d/1ey6QWLDuiZW_9KxYp4D29YSA3fxOb3vb/view?usp=sharing) 
 
  <h1>Table of Contents</h1>
 
