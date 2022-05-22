@@ -6,14 +6,12 @@
 <br>
 :arrow_forward: Team : Teamwork of 4
 
-:arrow_forward:[Video Presentation](https://drive.google.com/file/d/1ey6QWLDuiZW_9KxYp4D29YSA3fxOb3vb/view?usp=sharing)
-
-<h3>Currently in progress ! 💻</h3>
-
-> :round_pushpin: Goals to be achieved: 
+> :round_pushpin: Goals: 
 > * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing. 
 > * Apply Scrum project management methodology for organizing and managing our project. 
  
+<h3>:clapper:[Video Presentation](https://drive.google.com/file/d/1ey6QWLDuiZW_9KxYp4D29YSA3fxOb3vb/view?usp=sharing) </h3>
+
  <h1>Table of Contents</h1>
 
 <!-- TOC -->
