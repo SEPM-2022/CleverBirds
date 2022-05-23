@@ -40,6 +40,7 @@
 
  Clever Birds a project developed as an integration for a game via API along with Flask webserver. The player navigates the avatar bird through obstacles without hitting them, earning points as he or she passes each pipe. The application has a chatbot named “Tweety”, who guides parents about how to use their children's game time as an educational experience. 
   
+* [Project Charter)(https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/NewProjectCharter.JPG)
 
 ## 2. Requirements 
  
@@ -280,7 +281,14 @@ $ docker run -d -p 5000:5000 clever-bird
 ## 11. Confluence documentation 
 
 Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://drive.google.com/file/d/1bcfJRxCxT_YQqohx5oJ7WdmVtwPqjC3e/view?usp=sharing)
+
+:arrow_forward: In the Confluence Documentation PDF is not possible to visualize the Gantt Chart, Raci Matrix and Test Report, so we have included these items here:
+
+* [Gantt Chart](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/GanttChart%20CB.pdf)
+* [RACI Matrix](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/RACI-MATRIX-CB.pdf)
+* [Test Report](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/Test%20Report.pdf)
  
+
  ## 12. Useful Links  
  
 [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
