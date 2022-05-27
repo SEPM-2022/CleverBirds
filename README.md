@@ -1,16 +1,17 @@
  <h1>Clever Birds: Embracing Your Children’s Passion for Video Games </h1>
  
-This presentation is focused on the project management process of building our platform, a Javascript integration of game via API. “Clever Birds”, a game in which the player navigates the avatar bird through obstacles without hitting them, earning points as he or she passes each pipe. The application has a chatbot named “Tweety”, who guides parents about how to use their children's game time as an educational experience. 
-
+ Clever Birds a project developed as an integration for a game via API along with Flask webserver. This project  is focused on the project management process of building our application. Throughout the development of this project, we used Confluence and Jira together for planning and coordinating our work. 
+ 
 :arrow_forward: Duration : 3 months
 <br>
 :arrow_forward: Team : Teamwork of 4
 
-<h3>Currently in progress ! 💻</h3>
-
-> :round_pushpin: Goals to be achieved: 
+> :round_pushpin: Goals: 
 > * A light-weight demonstration of a working model of the web application Clever Birds and the description of testing. 
+> * Apply Scrum project management methodology for organizing and managing our project. 
  
+:clapper: Click [here](https://drive.google.com/file/d/1ey6QWLDuiZW_9KxYp4D29YSA3fxOb3vb/view?usp=sharing) to watch our video presentation 
+
  <h1>Table of Contents</h1>
 
 <!-- TOC -->
@@ -18,22 +19,17 @@ This presentation is focused on the project management process of building our p
 - [2. Requirements](#2-requirements) 
     - [2.1. Functional Requirements](#21-functional-requirements)
     - [2.2. Non-functional Requirements](#22-non-functional-requirements)
+    - [2.3. High priority requirements](#23-high-priority-requirements)
 - [3. How to use our platform](#3-how-to-use-our-platform)
 - [4. Clever Birds Game](#4-clever-birds-game)
-    - [4.1. Game Play](#41-game-play)
-    - [4.2. Game Activity Diagram](#42-game-activity-diagram) 
 - [5. Project Architecture](#5-project-architecture)
    - [5.1. Activity Diagram](#51-activity-diagram)
-- [6. Project Structure](#6-project-structure)
-- [7. Project Files](#7-project-files)
+   - [5.2. Project Structure](#51-project-structure)
 - [8. Python Dependencies](#8-python-dependencies) 
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
-- [11. Demo](#11-demo)
-- [12. Testing](#12-automated-testing)
-- [13. Project Roadmap](#13-project-roadmap)
-- [14. Confluence Documentation](#13-confluence-documentation)
-- [15. Useful Links](#15-useful-links)
+- [11. Confluence Documentation](#13-confluence-documentation)
+- [12. Useful Links](#15-useful-links)
 
 
  
@@ -42,24 +38,16 @@ This presentation is focused on the project management process of building our p
  
 ## 1. Overview 
 
-This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus with two Prototypes: a monolithic architecture and a microservice architecture. [Astronomy Picture Of The Day (APOD)](https://api.nasa.gov/), which is a NASA open API that returns the picture of the day, has been used as a model thoughout the development of both Prototypes:  
- 
-:arrow_forward: In the monolithic architecture, APOD was used as an API model in various aspects, such as user authorisation key and rate limits. 
-<br>
-:arrow_forward:In the microservice architecture, SFA-API is connected with APOD. Thus, our microservive returns a picture that comes directly from APOD. 
+ Clever Birds a project developed as an integration for a game via API along with Flask webserver. The player navigates the avatar bird through obstacles without hitting them, earning points as he or she passes each pipe. The application has a chatbot named “Tweety”, who guides parents about how to use their children's game time as an educational experience. 
+  
+* [Project Charter)(https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/NewProjectCharter.JPG)
 
-<br> 
- 
- 
- ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
- 
 ## 2. Requirements 
-
  
 ## 2.1. Functional Requirements
 
-* a1) Fun: Clever Birds is fun and simple. According to Rosewater (2011), the real way to determine if a game is fun is to ask the players if they would play again. We will do this through our chatbot Tweety in a customer satisfaction survey. 
-* a2) User Profile: Users can create a user profile.
+* a1) Fun: Clever Birds is fun and simple. By clicking the button "play now" on the top right or every screen, the user can start playing the game. 
+* a2) User Profile: After registration, all users have their personal profile.
 * a3)  Suitable for kids 5-8 years old: Clever Birds is very simple. After signing in, the user can see a green button on the top right ("PLAY NOW!") on all screens. By pressing the button, the user starts playing.  
 * a4) Unique selling point: A chatbot to talk to parents about the skills their children can gain.  
 * a5) Player persona: The application allows users to choose between three avatars.
@@ -68,8 +56,6 @@ This API, called SFA (Space Fan Art), is an API created with Flask REST-Plus wit
 
 
 ## 2.2. Non-functional Requirements
-
-> :small_orange_diamond: Design based on a microservice architecture, using MVC (Model-View-Controller) pattern.  
 
 * b1) The UI should be usable with 1 hand: In the Clever Birds game, the player pilots the bird into the pipes, by clicking with the mouse.
 * b2) Data must be stored in the most efficient way: Our application stores data efficiently, as explained in Appendix X: “Database Design”. 
@@ -98,13 +84,7 @@ Here is a summary showing how to use our platform step-by-step:
 
 ## 4. Clever Birds Game 
 
-![print](/readme_img/swagger_print.PNG)  
- 
-## 4.1. Game Play
-
-xxxxx
-
-## 4.2. Game Activity Diagram
+ ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
 
 
 ## 5. Project Architecture 
@@ -134,39 +114,151 @@ Click the links below to see the activity diagram:
 * [Clever Birds - Activity Diagram](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/March-16ActivityDiagram-CleverBirds-Website.jpg) 
 
 
-## 6. Project Structure
+## 5.2 Project Structure
 
 The following directory diagram was generated with the following command in the terminal: "tree /F"
  
 
-## 7. Project Files
-
-* `README.md` [README.md](https://github.com/SEPM-2022/CleverBirds/blob/develop/README.md)- Contains the description and documentation of the project. 
-* `app.py` [app.py](https://github.com/SEPM-2022/CleverBirds/blob/develop/app.py) - Creates the database and defines all the routes.   
-* `Dockerfile`[Dockerfile](https://github.com/SEPM-2022/CleverBirds/blob/develop/Dockerfile) - Docker config file to build a Docker image.
-* `application_structure.py` [application_structure.py](https://github.com/alicevillar/sfa_api/blob/main/application_structure.py) - Directory tree structure in Python.
-* `requirements.txt` [requirements.txt](https://github.com/SEPM-2022/CleverBirds/blob/develop/requirements.txt) - The list of Python (PyPi) requirements. Script: 1) pip install pipreqs; 2) pipreqs --encoding=utf8 C:\Users\Alice\PycharmProjects\SFA_DB 
-
+```
+C:.
+│   .gitignore
+│   app.py
+│   app.sqlite
+│   Dockerfile
+│   privacy-policy-page.html
+│   README.md
+│   requirements.txt
+│   start.sh
+│   test-e2e.sh
+│   test.sh
+│   tests.py
+├───assets
+│       CleverBirdsDB.sql
+│       March-14-ActivityDiagram-CleverBirds-Website.drawio.pdf
+│       March-16ActivityDiagram-CleverBirds-Website.jpg
+│       simpledb-april.JPG
+├───controllers
+│   │   chatbot.py
+│   │   game_controller.py
+│   │   users_controller.py
+│   │   user_documentation.py
+│   └───__pycache__
+│           chatbot.cpython-38.pyc
+│           game_controller.cpython-38.pyc
+│           users_controller.cpython-38.pyc
+│           user_documentation.cpython-38.pyc
+├───e2e
+│   │   cypress.json
+│   │   package-lock.json
+│   │   package.json
+│   └───cypress
+│       └───integration
+│               dynamic-pages.spec.js
+│               static-pages.spec.js
+├───models
+│   │   clever_users.py
+│   │   game_instance.py
+│   │   music.py
+│   └───__pycache__
+│           clever_users.cpython-38.pyc
+│           game_instance.cpython-38.pyc
+│           music.cpython-38.pyc
+├───static
+│   │   dashboard.css
+│   │   index.css
+│   ├───img
+│   └───js
+│       └───game
+│           │   .browserslistrc
+│           │   .eslintrc.json
+│           │   .gitignore
+│           │   angular.json
+│           │   jest-global-mocks.ts
+│           │   jest.config.js
+│           │   package-lock.json
+│           │   package.json
+│           │   README.md
+│           │   setup-jest.ts
+│           │   tsconfig.app.json
+│           │   tsconfig.json
+│           │   tsconfig.spec.json
+│           │   tslint.json
+│           │
+│           ├───dockerfiles
+│           │       build.Dockerfile
+│           │       test.Dockerfile
+│           ├───e2e
+│           │   │   protractor.conf.js
+│           │   │   tsconfig.json
+│           │   │
+│           │   └───src
+│           │           app.e2e-spec.ts
+│           │           app.po.ts
+│           └───src
+│               │   favicon.ico
+│               │   index.html
+│               │   main.ts
+│               │   polyfills.ts
+│               │   styles.scss
+│               ├───app
+│               │   │   app-routing.module.ts
+│               │   │   app.component.html
+│               │   │   app.component.scss
+│               │   │   app.component.spec.ts
+│               │   │   app.component.ts
+│               │   │   app.module.ts
+│               │   │   window.token.ts
+│               │   └───components
+│               │       └───game-over
+│               │               game-over.component.html
+│               │               game-over.component.ts
+│               ├───assets
+│               │   │   .gitkeep
+│               │   └───img
+│               └───environments
+│                       environment.prod.ts
+│                       environment.ts
+├───templates
+│       about.html
+│       au.html
+│       change-avatar.html
+│       choose-avatar.html
+│       create-account.html
+│       footer.html
+│       head.html
+│       header.html
+│       index.html
+│       manage-account.html
+│       playgame.html
+│       privacy-policy.html
+│       signup-success.html
+│       tweety.html
+│       user-dashboard.html
+└───__pycache__
+        app.cpython-38.pyc
+```
 
 ## 8. Python Dependencies
 
-  [*flask*](http://flask.pocoo.org/))  
+* [**flask**](http://flask.pocoo.org/) 
 * [**Werkzeug**](https://pypi.org/project/Werkzeug/) - for password hashing RESTful API documentation.
 * [**Pyodbc**](https://pypi.org/project/pyodbc/) - for accessing the database and carry out user registration.
 * [**Requests**](https://pypi.org/project/requests/) - for making HTTP requests in Python. 
-* [**Validator Collection**](https://pypi.org/project/validator-collection/) - to validade users' inputs. 
-* [**Dependency Check**](https://pypi.org/project/dependency-check/) - scans application dependencies and checks whether they contain any published vulnerabilities.
-
+ 
  
 ## 9. Tools
 
 * [**Docker**](https://www.docker.com/) - for storing the database and the API in a container. 
 * [**Ngrok**](https://ngrok.com/) - enabled the exposure of the a local development server to the Internet with minimal effort. 
-* [**Github**](https://github.com/alicevillar/sfa_api) - to document the project. 
+* [**Github**](https://github.com/alicevillar/sfa_api) - to store the code and document the project. 
 * [**Insomnia**](https://insomnia.rest/) - used to consume APOD and retrieve the 365 images for our dataset (monolithic architecture). 
 * [**JIRA**](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=89541890822&campaign=9124878120&creative=542569520122&device=c&keyword=jira%20project%20management%20software&matchtype=e&network=g&placement=&ds_kids=p51241495749&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAjw9LSSBhBsEiwAKtf0n46U4jUddN6hDaMFm69grPXSOFett05-wHANMVWGpSxsxZ8G_RdhwxoC6moQAvD_BwE&gclsrc=aw.ds) - used for project management. 
+* [**CONFLUENCE**](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=96330466462&campaign=9612124506&creative=425915242014&device=c&keyword=%2Bconfluence&matchtype=b&network=g&placement=&ds_kids=p52353042127&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQI6_HrbY2AqRc9qHw7d-FEv1V8S5twWSk_v-Y53l-PRSiQIt9BVRvkaAljLEALw_wcB&gclsrc=aw.ds) - for documentation.
+* [**Dbeaver**](https://dbeaver.pro/?url=https://dbeaver.io/
+) - we used as an interface for our database (SQLite). Allowed us to document our tests in our database. 
+* [**SourceTree**](https://www.sourcetreeapp.com/)) - to better vizualize our work as a team using gitflow.  
 
-
+ 
 ## 10. Installation
 
 ### Using python
@@ -186,85 +278,34 @@ $ docker build -t clever-bird .
 $ docker run -d -p 5000:5000 clever-bird
 ``` 
  
-  
-## 11. Quick Start  
+## 11. Confluence documentation 
+
+Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/CONFLUENCE-PDF-NEW.pdf)
+
+:arrow_forward: In the Confluence Documentation PDF is not possible to visualize the Gantt Chart, Raci Matrix and Test Report, so we have included these items here:
+
+* [Gantt Chart](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/GanttChart%20CB.pdf)
+* [RACI Matrix](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/RACI-MATRIX-CB.pdf)
+* [Test Report](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/Test%20Report.pdf)
  
- <br>
- Check our web application with the following link:  
- <br>
 
-## 12. Security Controls
-
-The [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) contains categories such as authentication, access control, error handling / logging, and web services. Each category contains a collection of requirements that represent the best practices for that category drafted as verifiable statements.  
-
->  :white_check_mark: Security requirements: 
->  * Protect against injection: We use parameterised queries to avoid SQL injection attacks in all the operations with the database. 
->  * Protect  Data: protected password with hashing.  
->  * Broken Access Control: Restrictions on what users are allowed to do. 
->  * Protect against Cross-Site Scripting (XSS): We protect against XSS in our web page, using javascript. 
-   
- <h3>C2: Leverage Security Frameworks and Libraries</h3>
-
-Secure frameworks and libraries can help to prevent a wide range of web application vulnerabilities.  
-
->  :white_check_mark: In Clever Birds we do a [dependency check](https://securityguide.github.io/webapps/tools/python-tools/python-dependency-checker.html) to detect publicly disclosed vulnerabilities contained within a project's dependencies. Click [here](https://github.com/alicevillar/sfa_api/blob/main/readme_img/dependency_check.JPG) to see the result.  
-
- <h3>C3: Secure Database Access</h3>
-
- According to OWASP, secure access to databases consider: secure queries, secure configuration, secure communication and secure authentication. 
-
->  :white_check_mark: Clever Birds handles secure database access with the following measures: 
-> * Secure queries: In order to mitigate SQL injection we used ‘Query Parameterization’. However, certain locations in a database query are not parameterisable. Because of the large variation in the pattern of SQL injection attacks they are often unable to protect databases. OWASP recommends testing queries for performance, but this is not done here because the queries are all very small and therefore it is not necessary. 
-> * Secure configuration: we run the database in a docker container, which has connectivity restrictions (can only be accessed by the administrator and only has one door open - 1433). The server which runs the database does not allow external access. All access to the database should be properly authenticated. Thus, it is not possible to directly access the database from outside the instance. 
-> * Secure communication: we use Pyodbc, an open source Python module to communicate with the database. We apply secure (authenticated, encrypted) communications methods.  
-
- <h3>C7: User Experience Monitoring</h3>
+ ## 12. Useful Links  
  
- > :white_check_mark: In Clever Birds, we monitor the user experience through our chatbot Tweety, who asks questions to users about their experience. 
+[Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
+ 
+[SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application) 
+ 
+[GITHUB project guidelines](https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212)
 
-<h3>C8: Protect Data Everywhere</h3>
- 
-> :white_check_mark: In Clever Birds, we protect data with parametrised queries to protect against SQL injection. OWASP recommends stored procedures but this is not done here because the queries are small, so this measure is unecessary. OWASP also recommends escaping, which we didn't need to do in our project because it wasn't necessary.
- 
-<h3>C9: Implement Security </h3>
-  
-Here is how we will implement secure user authentication system using the Python library [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/):
-
-> :white_check_mark:We won’t store passwords in plaintext in the database, but instead encrypt passwords using hashes.
-> :white_check_mark:Passwords stored as hash are irreversible to plaintext (one way hash).
-> :white_check_mark:With a given hash, attackers cannot guess the plaintext.  
-
-## 13. Testing
- 
-<h3>Here is our testing plan:</h3>  
- 
- 
-## 14. Confluence documentation 
-
-Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access the Confluence Documentation file: XXXXXXXXXXxx
-
-## 15. Project Roadmap 
-
-To take this project further: 
-
-* WEB INTERFACE: Improve....
-* AWS: Host the project in AWS, which offers reliable, scalable, and inexpensive cloud computing services.
-
- 
- ## 16. Useful Links  
- 
- 
- [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
- 
- [SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application) 
- 
- [GITHUB project guidelines](https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212)
- 
- [Flask Testing](]https://pythonhosted.org/Flask-Testing/)
- 
 [GIT FLOW](http://danielkummer.github.io/git-flow-cheatsheet/)
 
 [GIT FLOW Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
+[CLIPART MAX](https://www.clipartmax.com)
+
+[CLIPART LIBRARY](http://clipart-library.com/)
+
+
+ 
 
   
