@@ -281,7 +281,7 @@ $ docker run -d -p 5000:5000 clever-bird
  
 ## 11. Confluence documentation 
 
-Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/CONFLUENCE-PDF-NEW.pdf)
+Throughout the development of this project, we used Confluence to develop our product documentation, track meeting minutes, draw process flow diagrams, and create technical architecture documents. Please click here to access our [Confluence Documentation - PDF](https://drive.google.com/file/d/1Y5ASI4H_AUjZvYktif2K9_aPK04cBTUB/view?usp=sharing)
 
 :arrow_forward: In the Confluence Documentation PDF is not possible to visualize the Gantt Chart, Raci Matrix and Test Report, so we have included these items here:
 
