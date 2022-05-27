@@ -28,8 +28,9 @@
 - [8. Python Dependencies](#8-python-dependencies) 
 - [9. Tools](#9-tools) 
 - [10. Installation](#10-installation)
-- [11. Confluence Documentation](#13-confluence-documentation)
-- [12. Useful Links](#15-useful-links)
+- [11. Confluence Documentation](#11-confluence-documentation)
+- [12. Bug Report](#12-bug-report)
+- [13. Useful Links](#13-useful-links)
 
 
  
@@ -288,8 +289,13 @@ Throughout the development of this project, we used Confluence to develop our pr
 * [RACI Matrix](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/RACI-MATRIX-CB.pdf)
 * [Test Report](https://github.com/SEPM-2022/CleverBirds/blob/develop/assets/Test%20Report.pdf)
  
+## 12. Bug Report  
 
- ## 12. Useful Links  
+A bug report is a specific report that outlines information about what is wrong and needs fixing with software or on a website. The report lists reasons, or seen errors, to point out exactly what is viewed as wrong, and also includes a request and/or details for how to address each issue. Please find our Bug Report in the link below:
+
+* [Clever Birds - Bug Report](https://drive.google.com/file/d/1UlBfgoVsiWq5TRqLEk5fMa_lSOuUL2bv/view?usp=sharing)
+
+ ## 13. Useful Links  
  
 [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
  
