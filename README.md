@@ -91,9 +91,7 @@ Here is a summary showing how to use our platform step-by-step:
 
 # 4. References: 
 
->  * We followed the javascript tutorial at: [THE ASSEMBLY](https://youtu.be/w6w7NAb8PIg) and made the following modifications: decreased the speed of the bird, changed the whole background and customized the avatar so that the player can choose to be Birdy, Alfredo or Daisy. 
-
-We then rewrote it to typescript so that it could work with the angular framework and be easier testable. It now has the ability to be running stand-alone or by inclusion like we did with the python app.
+>  * We followed the javascript tutorial at: [THE ASSEMBLY](https://youtu.be/w6w7NAb8PIg) and made the following modifications: decreased the speed of the bird, changed the whole background and customized the avatar so that the player can choose to be Birdy, Alfredo or Daisy. We then rewrote it to typescript so that it could work with the angular framework and be easier testable. It now has the ability to be running stand-alone or by inclusion like we did with the python app.
 
 * Framework: https://angular.io/
 
