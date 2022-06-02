@@ -88,6 +88,9 @@ Here is a summary showing how to use our platform step-by-step:
  ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
 
 
+>  * For building the game we used [this code](https://github.com/omariosouto/flappy-bird-devsoutinho/) and made the following modifications: decreased the speed of the bird, changed the whole background and customized the avatar so that the player can choose to be Birdy, Alfredo or Daisy. 
+
+
 ## 5. Project Architecture 
 
 This project uses the Model-View-Controller (MVC) architecture framework, which can be described as an architectural pattern that separates an application
