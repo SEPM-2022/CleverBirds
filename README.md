@@ -85,10 +85,17 @@ Here is a summary showing how to use our platform step-by-step:
 
 ## 4. Clever Birds Game 
 
+ 
  ![play](https://cdn.discordapp.com/attachments/951482776895508504/972851900963770398/Screen-Recording-2022-05-08-at-1_1.gif)
 
 
->  * For building the game we used [this code](https://github.com/omariosouto/flappy-bird-devsoutinho/) and made the following modifications: decreased the speed of the bird, changed the whole background and customized the avatar so that the player can choose to be Birdy, Alfredo or Daisy. 
+# 4. References: 
+
+>  * We followed the javascript tutorial at: [THE ASSEMBLY](https://youtu.be/w6w7NAb8PIg) and made the following modifications: decreased the speed of the bird, changed the whole background and customized the avatar so that the player can choose to be Birdy, Alfredo or Daisy. 
+
+We then rewrote it to typescript so that it could work with the angular framework and be easier testable. It now has the ability to be running stand-alone or by inclusion like we did with the python app.
+
+* Framework: https://angular.io/
 
 
 ## 5. Project Architecture 
@@ -313,6 +320,8 @@ A bug report is a specific report that outlines information about what is wrong 
 [CLIPART MAX](https://www.clipartmax.com)
 
 [CLIPART LIBRARY](http://clipart-library.com/)
+
+[THE ASSEMBLY](https://youtu.be/w6w7NAb8PIg)
 
 
  
